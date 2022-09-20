@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LithiumAktie</string>
+
+    <string name="splash_title"><font color="#00D4FC"><b>Lthium </b></font><font color="#222525"><b>Aktie</b></font></string>
+    <string name="click_back_again_to_exit">Click BACK again to exit</string>
+    <string name="hello_blank_fragment">Hello_blank</string>
+    <string name="Impressum">Impressum</string>
+    <string name="home">Home</string>
+    <string name="datenschutzerklarung">Datenschutzerklärung</string>
+
+</resources>

@@ -1,0 +1,74 @@
+{
+  "project_info": {
+    "project_number": "288817064410",
+    "project_id": "asifproject-90381",
+    "storage_bucket": "asifproject-90381.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288817064410:android:264dab2aee70379dec78e3",
+        "android_client_info": {
+          "package_name": "com.asif.lithiumaktie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288817064410-abvq94qv6rtul8s52r6cbrne3g8s7okd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSAitYmeiCeNkz1P3C8j5T7RNQHKFCkLw"
+        },
+        {
+          "current_key": "AIzaSyB7_WLnwSMPmXKqK_ss0WZC1OQmUnnomuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288817064410-abvq94qv6rtul8s52r6cbrne3g8s7okd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288817064410:android:3779d0c305c3353cec78e3",
+        "android_client_info": {
+          "package_name": "com.best.touragency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288817064410-abvq94qv6rtul8s52r6cbrne3g8s7okd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSAitYmeiCeNkz1P3C8j5T7RNQHKFCkLw"
+        },
+        {
+          "current_key": "AIzaSyB7_WLnwSMPmXKqK_ss0WZC1OQmUnnomuE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288817064410-abvq94qv6rtul8s52r6cbrne3g8s7okd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
