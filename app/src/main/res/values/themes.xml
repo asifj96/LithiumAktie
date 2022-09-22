@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.LithiumAktie" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/colorCyn</item>
+        <item name="colorPrimary">@color/colorDarkCyn</item>
         <item name="colorPrimaryVariant">@color/colorWhite</item>
         <item name="colorOnPrimary">@color/colorDarkGrey</item>
 
@@ -40,7 +40,7 @@
 
     <!-- active tab icon style -->
     <style name="TextAppearance.BottomNavigationView.Active">
-        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
         <item name="fontFamily">@font/dm_sans_medium</item>
     </style>
 
@@ -53,7 +53,7 @@
     </style>
 
     <style name="parentTextViewZilla" parent="Theme.LithiumAktie">
-        <item name="fontFamily">@font/zilla_slab_semi_bold</item>
+        <item name="fontFamily">@font/zilla_slab_regular</item>
         <item name="fontStyle">normal</item>
         <item name="android:textStyle">normal</item>
         <item name="fontWeight">500</item>

@@ -42,7 +42,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun startHandler() {
-        splashHandler.postDelayed(splashRunnable, 5000)
+        splashHandler.postDelayed(splashRunnable, 2000)
     }
 
     override fun onResume() {

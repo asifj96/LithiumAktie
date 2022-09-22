@@ -2,20 +2,1124 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textColor="@color/colorDarkGrey"
-            android:text="Hello"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:gravity="center"
-            android:textSize="@dimen/_20sdp"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightGrey">
+
+            <include
+                android:id="@+id/headerMain"
+                layout="@layout/header_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/IvHeaderImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_header_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerMain" />
+
+            <TextView
+                android:id="@+id/tvHeaderImageTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                android:text="@string/header_image_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvHeaderImage" />
+
+            <TextView
+                android:id="@+id/tvHeaderImageDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/header_image_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderImageTitle" />
+
+
+            <TextView
+                android:id="@+id/tvShareArticle"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/share_background"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/share_article"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeaderImageDescription" />
+
+            <TextView
+                android:id="@+id/tvAnlegerstudie"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:background="@drawable/outline_bg_1"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/Anlegerstudie"
+                android:textColor="@color/colorDarkCyn"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toStartOf="@id/tvAktienempfehlung"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvShareArticle" />
+
+
+            <TextView
+                android:id="@+id/tvAktienempfehlung"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_12sdp"
+                android:background="@drawable/outline_bg_2"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_8sdp"
+                android:text="@string/Aktienempfehlung"
+                android:textColor="@color/colorCyn"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvAnlegerstudie"
+                app:layout_constraintTop_toBottomOf="@id/tvShareArticle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLKaufemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:background="@drawable/grey_outline"
+                android:elevation="@dimen/_2sdp"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAnlegerstudie">
+
+
+                <TextView
+                    android:id="@+id/tvKaufempTitle"
+                    style="@style/TextViewStyle.14sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/grey_background"
+                    android:fontFamily="@font/dm_sans_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="@string/kauf_title"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/IvKaufHeaderImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/app_name"
+                    android:elevation="@dimen/_2sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arbor_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvKaufempTitle" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLKaufDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/IvKaufHeaderImage">
+
+
+                    <TextView
+                        android:id="@+id/tvKaufCompany"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/kauf_company"
+                        android:textColor="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvKaufCompanyName"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/kauf_company_name"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufCompany" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufCompanyName" />
+
+
+                    <TextView
+                        android:id="@+id/tvKaufBranche"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/kauf_branche"
+                        android:textColor="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view1" />
+
+                    <TextView
+                        android:id="@+id/tvKaufBarncheName"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/kauf_branche_name"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufBranche" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufBarncheName" />
+
+                    <TextView
+                        android:id="@+id/tvKaufWebseite"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/kauf_webseite"
+                        android:textColor="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                    <TextView
+                        android:id="@+id/tvKaufWebseiteName"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/kauf_webseite_name"
+                        android:textColorLink="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufWebseite" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufWebseiteName" />
+
+
+                    <TextView
+                        android:id="@+id/tvKaufBorsenkennung"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/kauf_borsenkennung"
+                        android:textColor="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view3" />
+
+                    <TextView
+                        android:id="@+id/tvKaufBorsenkennungName"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/kauf_borsenkennung_name"
+                        android:textColorLink="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufBorsenkennung" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufBorsenkennungName" />
+
+                    <TextView
+                        android:id="@+id/tvKaufAktuellerKurs"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/kauf_aktueller_kurs"
+                        android:textColor="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view4" />
+
+                    <TextView
+                        android:id="@+id/tvKaufAktuellerKursName"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/kauf_aktueller_kurs_name"
+                        android:textColorLink="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufAktuellerKurs" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/colorGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufAktuellerKursName" />
+
+                    <TextView
+                        android:id="@+id/tvKaufKursziel"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="@string/kauf_kursziel"
+                        android:textColor="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view5" />
+
+                    <TextView
+                        android:id="@+id/tvKaufKurszielName"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="@string/kauf_kursziel_name"
+                        android:textColorLink="@color/colorDarkCyn"
+                        android:textIsSelectable="true"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufKursziel" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStrongBuy"
+                        style="@style/TextViewStyle.12sdp"
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:fontFamily="@font/dm_sans_bold"
+                        android:text="@string/strong"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufKurszielName" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvKaufInfo"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/kauf_info"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="6"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cLKaufemp"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvOhneLithiumTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/ohne_lithium"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKaufInfo" />
+
+            <TextView
+                android:id="@+id/tvOhneLithiumDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/ohne_lithium_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle" />
+
+            <ImageView
+                android:id="@+id/IvOhneLithiumImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_ohne_lithium_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription" />
+
+
+            <TextView
+                android:id="@+id/tvOhneLithiumDescription1"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/ohne_lithium_description_1"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvOhneLithiumImage" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvOhneLithiumDescription2"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/ohne_lithium_description_2"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="5"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription1"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvWarumDieTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/warum_die"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription2" />
+
+            <TextView
+                android:id="@+id/tvWarumDieDescription1"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/warum_die_description_1"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWarumDieTitle" />
+
+            <ImageView
+                android:id="@+id/IvWarmDieImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/warm_die_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription1" />
+
+            <TextView
+                android:id="@+id/tvWarumDieDescription2"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/warum_die_description_2"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvWarmDieImage" />
+
+            <TextView
+                android:id="@+id/tvRegierungenTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/regierungen_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription2" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvRegierungenDescription1"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/regierungen_description_1"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="5"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <ImageView
+                android:id="@+id/IvRegierungenImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/regierungen_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription1" />
+
+            <TextView
+                android:id="@+id/tvRegierungenDescription2"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/regierungen_description_2"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvRegierungenImage" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvRegierungenDescription3"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/regierungen_description_3"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="10"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription2"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvEsgibtTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/es_gibt_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription3" />
+
+            <TextView
+                android:id="@+id/tvEsgibtDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/es_gibt_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEsgibtTitle" />
+
+            <TextView
+                android:id="@+id/tvWoistTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/woist_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEsgibtDescription" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvWoistDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/tv_wost_description"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="8"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWoistTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvWasIstTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/wasIst_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWoistDescription" />
+
+            <TextView
+                android:id="@+id/tvWasIstDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/was_ist_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWasIstTitle" />
+
+            <ImageView
+                android:id="@+id/IvWasItImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/was_ist_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription" />
+
+            <TextView
+                android:id="@+id/tvWasIstDescription1"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/was_ist_description_1"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvWasItImage" />
+
+
+            <TextView
+                android:id="@+id/tvLithiumTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/lithium_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription1" />
+
+            <TextView
+                android:id="@+id/tvLithiumDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/litium_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLithiumTitle" />
+
+            <TextView
+                android:id="@+id/tvAuswirkungenTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/auswirkungen_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvLithiumDescription" />
+
+            <TextView
+                android:id="@+id/tvAuswirkungenDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/auswirkungen_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenTitle" />
+
+            <ImageView
+                android:id="@+id/IvAuswirkungenImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/auswirkungen_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenDescription" />
+
+            <TextView
+                android:id="@+id/tvAuswirkungenDescription1"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/auswirkungen_description1"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvAuswirkungenImage" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvAuswirkungenDescription2"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/auswirkungen_description_2"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="5"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenDescription1"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvArborTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/arbor_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenDescription2" />
+
+            <TextView
+                android:id="@+id/tvArborDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/arbor_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvArborTitle" />
+
+            <TextView
+                android:id="@+id/tvMillersTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/millers_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvArborDescription" />
+
+            <TextView
+                android:id="@+id/tvMillersDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/millers_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMillersTitle" />
+
+            <ImageView
+                android:id="@+id/IvMillersImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_millers_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMillersDescription" />
+
+            <TextView
+                android:id="@+id/tvMillersDescription_1"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/millers_description_1"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvMillersImage" />
+
+            <TextView
+                android:id="@+id/tvKandaTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/kanda_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMillersDescription_1" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvKandaDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/kanda_description"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="5"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKandaTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvAktieTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/aktie_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKandaDescription" />
+
+            <TextView
+                android:id="@+id/tvAktieDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/aktie_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAktieTitle" />
+
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/exoplayer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAktieDescription"
+                android:gravity="center" />
+
+            <!--<com.devbrackets.android.exomedia.ui.widget.VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAktieDescription"
+                app:useDefaultControls="true"/>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 </layout>

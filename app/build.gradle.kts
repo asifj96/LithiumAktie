@@ -96,6 +96,10 @@ dependencies {
     implementation(LifeCycle.livedataKtx)
     implementation(LifeCycle.lifecycleExtensions)
     implementation(LifeCycle.runtimeKtx)
+
+    implementation("io.github.glailton.expandabletextview:expandabletextview:1.0.2")
+    implementation ("com.google.android.exoplayer:exoplayer:2.18.1")
+
 }
 kapt {
     correctErrorTypes = true

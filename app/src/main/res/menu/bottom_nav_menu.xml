@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/impressumFragment"
-        android:icon="@drawable/ic_impressum_icon"
+        android:icon="@drawable/impressum_selector"
         android:title="@string/Impressum" />
 
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_home_icon"
+        android:icon="@drawable/home_selector"
         android:title="@string/home" />
 
     <item
         android:id="@+id/datenschutzerklarungFragment"
-        android:icon="@drawable/ic_datenschutzerklarung_icon"
+        android:icon="@drawable/datenschutzerklsrung_selector"
         android:title="@string/datenschutzerklarung" />
 
 

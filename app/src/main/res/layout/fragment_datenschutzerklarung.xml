@@ -1,14 +1,690 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.fragment.DatenschutzerklarungFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="sdasdasdadadadaad" />
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightGrey">
+
+            <include
+                android:id="@+id/headerMain"
+                layout="@layout/header_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvDatenschutzerklarungTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/datenschutzerklarung"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerMain" />
+
+            <TextView
+                android:id="@+id/tvDatenschutzerklarungDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/datenschutzerklarung_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDatenschutzerklarungTitle" />
+
+            <TextView
+                android:id="@+id/tvVeranTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/veran"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDatenschutzerklarungDescription" />
+
+            <TextView
+                android:id="@+id/tvVeranDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:textIsSelectable="true"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/veran_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVeranTitle" />
+
+            <TextView
+                android:id="@+id/tvErhebungTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/erhebung_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVeranDescription" />
+
+            <TextView
+                android:id="@+id/tvErhebungDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/erhebung_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErhebungTitle" />
+
+            <TextView
+                android:id="@+id/tvKontakTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Kontak_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvErhebungDescription" />
+
+            <TextView
+                android:id="@+id/tvKontakDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/kontak_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKontakTitle" />
+
+            <TextView
+                android:id="@+id/tvIhreTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Ihre_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKontakDescription" />
+
+            <TextView
+                android:id="@+id/tvIhreDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/ihre_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIhreTitle" />
+
+            <TextView
+                android:id="@+id/tvWiderrufTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Widerruf_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIhreDescription" />
+
+            <TextView
+                android:id="@+id/tvWiderrufDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/widerruf_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWiderrufTitle" />
+
+            <TextView
+                android:id="@+id/tvWeitergabeTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Weitergabe_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWiderrufDescription" />
+
+            <TextView
+                android:id="@+id/tvWeitergabeDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/Weitergabe_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWeitergabeTitle" />
+
+            <TextView
+                android:id="@+id/tvNewsletterTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Newsletter_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWeitergabeDescription" />
+
+            <TextView
+                android:id="@+id/tvNewsletterDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/Newsletter_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNewsletterTitle" />
+
+
+            <TextView
+                android:id="@+id/tvServerLogTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/server_log_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNewsletterDescription" />
+
+            <TextView
+                android:id="@+id/tvServerLogDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/server_log_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvServerLogTitle" />
+
+            <TextView
+                android:id="@+id/tvEinsatzTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Einsatz_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvServerLogDescription" />
+
+            <TextView
+                android:id="@+id/tvEinsatzDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/Einsatz_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEinsatzTitle" />
+
+
+            <TextView
+                android:id="@+id/tvWebAnalyseTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/webAnalyse_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEinsatzDescription" />
+
+            <TextView
+                android:id="@+id/tvGoogleAnalyticsTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/google_analytics_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWebAnalyseTitle" />
+
+            <TextView
+                android:id="@+id/tvGoogleAnalyticsDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/google_analytics_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGoogleAnalyticsTitle" />
+
+            <TextView
+                android:id="@+id/tvKonversionTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/konversion_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGoogleAnalyticsDescription" />
+
+            <TextView
+                android:id="@+id/tvKonversionDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/konversion_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKonversionTitle" />
+
+            <TextView
+                android:id="@+id/tvDoubleClickTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/double_click_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKonversionDescription" />
+
+            <TextView
+                android:id="@+id/tvDoubleClickDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/double_click_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDoubleClickTitle" />
+
+            <TextView
+                android:id="@+id/tvHotjarTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/Hotjar_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDoubleClickDescription" />
+
+
+            <TextView
+                android:id="@+id/tvHotjarDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/hot_jar_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHotjarTitle" />
+
+
+            <TextView
+                android:id="@+id/tvVonFacebookTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/von_facebook_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHotjarDescription" />
+
+            <TextView
+                android:id="@+id/tvVonFacebookDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/von_facebook_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVonFacebookTitle" />
+
+            <TextView
+                android:id="@+id/tvFacebookAudiencesTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/facebook_audiences_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVonFacebookDescription" />
+
+            <TextView
+                android:id="@+id/tvFacebookAudiencesDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/facebook_audiences_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFacebookAudiencesTitle" />
+
+            <TextView
+                android:id="@+id/tvPlistaTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/plista_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFacebookAudiencesDescription" />
+
+            <TextView
+                android:id="@+id/tvPlistaDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/plista_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPlistaTitle" />
+
+            <TextView
+                android:id="@+id/tvSocialMediaTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/social_media_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPlistaDescription" />
+
+            <TextView
+                android:id="@+id/tvSocialMediaDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/social_media_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSocialMediaTitle" />
+
+            <TextView
+                android:id="@+id/tvEmbeddingYoutubeTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/embedding_youtube_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSocialMediaDescription" />
+
+            <TextView
+                android:id="@+id/tvEmbeddingYoutubeDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:autoLink="web"
+                android:textColorLink="@color/colorDarkCyn"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/embedding_youtube_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmbeddingYoutubeTitle" />
+
+            <TextView
+                android:id="@+id/tvWebsiteLinksTitle"
+                style="@style/TextViewStyle.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textIsSelectable="true"
+                android:text="@string/website_links_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEmbeddingYoutubeDescription" />
+
+            <TextView
+                android:id="@+id/tvWebsiteLinksDescription"
+                style="@style/TextViewStyle.12sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:textIsSelectable="true"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/website_links_description"
+                android:textColor="@color/colorDarkGrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWebsiteLinksTitle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

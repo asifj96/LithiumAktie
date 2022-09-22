@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             DataBindingUtil.inflate(layoutInflater, R.layout.activity_main, container, false)
         setContentView(Companion.activityMainBinding.root)
 
+        Companion.activityMainBinding.bottomNav.itemIconTintList = null
         Companion.activityMainBinding.bottomNav.setupWithNavController(navController)
 
         Companion.activityMainBinding.bottomNav.setOnItemSelectedListener { item ->

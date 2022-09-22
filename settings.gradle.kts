@@ -3,6 +3,9 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven("https://jitpack.io")
+
+
     }
     // allows the plugins syntax to be used with the android gradle plugin
     resolutionStrategy.eachPlugin {
