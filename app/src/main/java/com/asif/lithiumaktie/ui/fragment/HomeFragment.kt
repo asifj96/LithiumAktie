@@ -14,6 +14,7 @@ import com.asif.lithiumaktie.databinding.FragmentHomeBinding
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
+import com.google.android.exoplayer2.util.MimeTypes
 
 
 class HomeFragment : Fragment(), Player.Listener {
@@ -42,9 +43,11 @@ class HomeFragment : Fragment(), Player.Listener {
         simpleExoplayer = ExoPlayer.Builder(requireContext()).build()
         simpleExoplayer?.also {
             mBinding.exoplayer.player = it
-            val mediaItem =
-                MediaItem.fromUri("https://drive.google.com/file/d/1p2a4DXAw4GnFyEs1m3FZrVUV2o1u3UtD/view?usp=sharing")
-            it.addMediaItem(mediaItem)
+            val mediaItem = MediaItem.Builder()
+                .setUri("https://www.youtube.com/shorts/hHz8kUb1g2o")
+                .setMimeType(MimeTypes.APPLICATION_MPD)
+                .build()
+            it.setMediaItem(mediaItem)
             it.prepare()
             it.addListener(this)
         }
