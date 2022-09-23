@@ -22,7 +22,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun gotoMainScreen() {
-        findNavController().navigate(R.id.action_splashFragment_to_impressumFragment)
+        findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
     }
 
     override fun onCreateView(

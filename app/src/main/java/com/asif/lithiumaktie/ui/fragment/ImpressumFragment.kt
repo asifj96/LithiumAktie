@@ -30,6 +30,5 @@ class ImpressumFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mBinding.headerMain.tvDate.text = "Aktientipp ${requireContext().getCurrentDate()}"
-        activityMainBinding.bottomNav.visibility = View.VISIBLE
     }
 }

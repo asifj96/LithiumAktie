@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/tv"
-        style="@style/TextViewStyle.12sdp"
+        style="@style/TextViewStyleDmSansRegular.12sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autoLink="web"
         android:background="@color/colorLightGrey"
         android:gravity="center"
-        android:autoLink="web"
         android:linksClickable="true"
-        android:textIsSelectable="true"
         android:paddingVertical="@dimen/_12sdp"
         android:text="@string/header_link"
         android:textColor="@color/colorDarkCyn"
+        android:textIsSelectable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,10 +26,11 @@
         android:id="@+id/cLStrongBuy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:background="@drawable/header_background"
         android:elevation="@dimen/_5sdp"
         android:paddingHorizontal="@dimen/_8sdp"
-        android:paddingVertical="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_8sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv">
@@ -43,22 +43,25 @@
             android:layout_height="wrap_content"
             android:gravity="center|start"
             android:lines="2"
-            android:textIsSelectable="true"
             android:maxLines="2"
             android:text="@string/string2"
             android:textColor="@color/colorDarkCyn"
+            android:textIsSelectable="true"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnStrongBuy"
+        <TextView
+            android:id="@+id/tvStrongBuy"
             style="@style/TextViewStyle.12sdp"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_40sdp"
-            android:fontFamily="@font/dm_sans_bold"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/dm_sans_regular"
+            android:gravity="center"
             android:text="@string/strong"
+            android:layout_marginHorizontal="@dimen/_5sdp"
             android:textAllCaps="true"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
@@ -75,14 +78,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="2"
-        android:textIsSelectable="true"
         android:paddingHorizontal="@dimen/_8sdp"
         android:paddingVertical="@dimen/_10sdp"
+        android:text="Aktientipp am 09/21/2022"
         android:textColor="@color/colorDarkCyn"
+        android:textIsSelectable="true"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cLStrongBuy"
-        android:text="Aktientipp am 09/21/2022" />
+        app:layout_constraintTop_toBottomOf="@id/cLStrongBuy" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

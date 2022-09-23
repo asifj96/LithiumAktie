@@ -4,6 +4,7 @@ buildscript {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+        jcenter()
 
     }
     dependencies {
@@ -20,6 +21,8 @@ allprojects {
         google()
         mavenCentral()
         maven("https://jitpack.io")
+        jcenter()
+
     }
 }
 tasks.register("clean", Delete::class) {

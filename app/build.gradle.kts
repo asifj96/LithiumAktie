@@ -98,6 +98,11 @@ dependencies {
     implementation(LifeCycle.runtimeKtx)
 
     implementation("io.github.glailton.expandabletextview:expandabletextview:1.0.2")
+    // Exo Player
+
+    implementation ("com.google.android.exoplayer:exoplayer-core:2.11.5")
+    implementation ("com.google.android.exoplayer:exoplayer-dash:2.11.5")
+    implementation ("com.google.android.exoplayer:exoplayer-ui:2.11.5")
 }
 kapt {
     correctErrorTypes = true
