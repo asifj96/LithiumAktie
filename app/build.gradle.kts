@@ -24,14 +24,14 @@ android {
 
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
-            isShrinkResources = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro")
         }
         getByName("debug") {
-            isMinifyEnabled = false
-            isShrinkResources = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro")
         }
@@ -98,8 +98,6 @@ dependencies {
     implementation(LifeCycle.runtimeKtx)
 
     implementation("io.github.glailton.expandabletextview:expandabletextview:1.0.2")
-    implementation ("com.google.android.exoplayer:exoplayer:2.18.1")
-
 }
 kapt {
     correctErrorTypes = true
