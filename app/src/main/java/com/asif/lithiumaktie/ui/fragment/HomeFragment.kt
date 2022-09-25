@@ -28,7 +28,6 @@ class HomeFragment : Fragment(), Player.EventListener {
     private val resValue = "assets:///video.mp4"
     private var playerUtil: ExoPlayerUtil? = null
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -50,6 +49,7 @@ class HomeFragment : Fragment(), Player.EventListener {
 
         MainActivity.activityMainBinding.bottomNav.visibility = View.VISIBLE
         mBinding.headerMain.tvDate.text = "Aktientipp ${requireContext().getCurrentDate()}"
+
         mBinding.tvShareArticle.setOnClickListener {
 
             if (disableClick()) {
@@ -57,16 +57,24 @@ class HomeFragment : Fragment(), Player.EventListener {
                 requireContext().shareApp()
             }
         }
+        mBinding.headerMain.tv.setOnClickListener {
+
+            if (disableClick()) {
+                mBinding.scrollView.post {
+                    mBinding.scrollView.scrollTo(0, mBinding.btnStrongBuy1.bottom)
+                }
+            }
+        }
     }
 
     override fun onStart() {
         super.onStart()
-       /* if (Util.SDK_INT > 23) {
-            playerUtil?.initialize(resValue)
-            playerUtil?.play()
-            Timber.e(resValue)
+        /* if (Util.SDK_INT > 23) {
+             playerUtil?.initialize(resValue)
+             playerUtil?.play()
+             Timber.e(resValue)
 
-        }*/
+         }*/
     }
 
     override fun onResume() {
@@ -75,8 +83,8 @@ class HomeFragment : Fragment(), Player.EventListener {
 
         try {
 //            if (Util.SDK_INT <= 23 || playerUtil == null) {
-                playerUtil?.initialize(resValue)
-                Timber.e(resValue)
+            playerUtil?.initialize(resValue)
+            Timber.e(resValue)
 //                playerUtil?.play()
 //            }
         } catch (e: Exception) {
@@ -109,7 +117,7 @@ class HomeFragment : Fragment(), Player.EventListener {
             ExoPlayer.STATE_IDLE -> "ExoPlayer.STATE_IDLE      -"
             ExoPlayer.STATE_BUFFERING -> "ExoPlayer.STATE_BUFFERING -"
             ExoPlayer.STATE_READY -> "ExoPlayer.STATE_READY     -"
-                    ExoPlayer.STATE_ENDED -> "ExoPlayer.STATE_ENDED     -"
+            ExoPlayer.STATE_ENDED -> "ExoPlayer.STATE_ENDED     -"
             else -> "UNKNOWN_STATE             -"
         }
         Log.d(

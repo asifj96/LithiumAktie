@@ -20,15 +20,18 @@
         android:id="@+id/homeFragment"
         android:name="com.asif.lithiumaktie.ui.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+    </fragment>
     <fragment
         android:id="@+id/impressumFragment"
         android:name="com.asif.lithiumaktie.ui.fragment.ImpressumFragment"
         android:label="fragment_impressum"
-        tools:layout="@layout/fragment_impressum" />
+        tools:layout="@layout/fragment_impressum" >
+    </fragment>
     <fragment
         android:id="@+id/datenschutzerklarungFragment"
         android:name="com.asif.lithiumaktie.ui.fragment.DatenschutzerklarungFragment"
         android:label="fragment_datenschutzerklarung"
-        tools:layout="@layout/fragment_datenschutzerklarung" />
+        tools:layout="@layout/fragment_datenschutzerklarung" >
+    </fragment>
 </navigation>

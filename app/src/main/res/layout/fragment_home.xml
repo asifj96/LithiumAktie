@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -38,7 +39,7 @@
 
             <TextView
                 android:id="@+id/tvHeaderImageTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.18sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -54,7 +55,7 @@
 
             <TextView
                 android:id="@+id/tvHeaderImageDescription"
-                style="@style/TextViewStyleDmSansBold.12sdp"
+                style="@style/TextViewStyleDmSansBold.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
@@ -69,14 +70,14 @@
 
             <TextView
                 android:id="@+id/tvShareArticle"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.10sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
                 android:background="@drawable/share_background"
 
                 android:paddingHorizontal="@dimen/_12sdp"
-                android:paddingVertical="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/share_article"
                 android:textColor="@color/colorWhite"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,8 +93,7 @@
                 android:background="@drawable/outline_bg_1"
                 android:gravity="center"
                 android:maxLines="2"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Anlegerstudie"
                 android:textColor="@color/colorDarkCyn"
                 android:textIsSelectable="true"
@@ -112,8 +112,7 @@
                 android:background="@drawable/outline_bg_2"
                 android:gravity="center"
                 android:maxLines="2"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Aktienempfehlung"
                 android:textColor="@color/colorCyn"
                 android:textIsSelectable="true"
@@ -136,7 +135,7 @@
 
                 <TextView
                     android:id="@+id/tvKaufempTitle"
-                    style="@style/TextViewStyleDmSansRegular.14sdp"
+                    style="@style/TextViewStyleDmSansBold.16sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/grey_background"
@@ -179,7 +178,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufCompany"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_5sdp"
@@ -193,7 +192,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufCompanyName"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
@@ -217,7 +216,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufBranche"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_5sdp"
@@ -231,7 +230,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufBarncheName"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingVertical="@dimen/_5sdp"
@@ -254,7 +253,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufWebseite"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_5sdp"
@@ -268,7 +267,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufWebseiteName"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
@@ -293,7 +292,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufBorsenkennung"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_5sdp"
@@ -307,7 +306,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufBorsenkennungName"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
@@ -332,7 +331,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufAktuellerKurs"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_5sdp"
@@ -346,7 +345,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufAktuellerKursName"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
@@ -371,7 +370,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufKursziel"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_5sdp"
@@ -385,7 +384,7 @@
 
                     <TextView
                         android:id="@+id/tvKaufKurszielName"
-                        style="@style/TextViewStyleDmSansRegular.12sdp"
+                        style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
@@ -404,7 +403,7 @@
                         android:id="@+id/btnStrongBuy"
                         style="@style/TextViewStyleDmSansRegular.14sdp"
                         android:layout_width="@dimen/_160sdp"
-                        android:layout_height="@dimen/_35sdp"
+                        android:layout_height="@dimen/_30sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:background="@drawable/button_background"
                         android:gravity="center"
@@ -422,7 +421,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvKaufInfo"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -443,7 +442,7 @@
 
             <TextView
                 android:id="@+id/tvOhneLithiumTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -458,7 +457,7 @@
 
             <TextView
                 android:id="@+id/tvOhneLithiumDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
@@ -488,21 +487,22 @@
 
             <TextView
                 android:id="@+id/tvOhneLithiumDescription1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/ohne_lithium_description_1"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
+                android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvOhneLithiumImage" />
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvOhneLithiumDescription2"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -523,7 +523,7 @@
 
             <TextView
                 android:id="@+id/tvWarumDieTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -538,7 +538,7 @@
 
             <TextView
                 android:id="@+id/tvWarumDieDescription1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
@@ -565,9 +565,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription1" />
 
+
+            <TextView
+                android:id="@+id/tvWarumDieDescription3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/warum_die_description_3"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvWarmDieImage" />
+
             <TextView
                 android:id="@+id/tvWarumDieDescription2"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
@@ -577,11 +593,11 @@
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvWarmDieImage" />
+                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription3" />
 
             <TextView
                 android:id="@+id/tvRegierungenTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -596,7 +612,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvRegierungenDescription1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -632,21 +648,22 @@
 
             <TextView
                 android:id="@+id/tvRegierungenDescription2"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/regierungen_description_2"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
+                android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvRegierungenImage" />
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvRegierungenDescription3"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -667,7 +684,7 @@
 
             <TextView
                 android:id="@+id/tvEsgibtTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -682,7 +699,7 @@
 
             <TextView
                 android:id="@+id/tvEsgibtDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
@@ -696,7 +713,7 @@
 
             <TextView
                 android:id="@+id/tvWoistTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -711,7 +728,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvWoistDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -732,7 +749,7 @@
 
             <TextView
                 android:id="@+id/tvWasIstTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -748,7 +765,7 @@
 
             <TextView
                 android:id="@+id/tvWasIstDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -777,11 +794,25 @@
                 app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription" />
 
             <TextView
-                android:id="@+id/tvWasIstDescription1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                android:id="@+id/tvWasIstDescription2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/was_ist_description_2"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvWasItImage" />
 
+            <TextView
+                android:id="@+id/tvWasIstDescription1"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
@@ -789,12 +820,11 @@
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvWasItImage" />
-
+                app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription2" />
 
             <TextView
                 android:id="@+id/tvLithiumTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -810,7 +840,7 @@
 
             <TextView
                 android:id="@+id/tvLithiumDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -825,7 +855,7 @@
 
             <TextView
                 android:id="@+id/tvAuswirkungenTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -841,7 +871,7 @@
 
             <TextView
                 android:id="@+id/tvAuswirkungenDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -871,10 +901,10 @@
 
             <TextView
                 android:id="@+id/tvAuswirkungenDescription1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/dm_sans_medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
@@ -886,7 +916,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvAuswirkungenDescription2"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -908,7 +938,7 @@
 
             <TextView
                 android:id="@+id/tvArborTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -924,7 +954,7 @@
 
             <TextView
                 android:id="@+id/tvArborDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -939,10 +969,9 @@
 
             <TextView
                 android:id="@+id/tvMillersTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/millers_title"
@@ -955,7 +984,7 @@
 
             <TextView
                 android:id="@+id/tvMillersDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -985,11 +1014,10 @@
 
             <TextView
                 android:id="@+id/tvMillersDescription_1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/dm_sans_medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
-                android:gravity="center"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
@@ -1001,10 +1029,9 @@
 
             <TextView
                 android:id="@+id/tvKandaTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/kanda_title"
@@ -1017,7 +1044,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvKandaDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -1039,10 +1066,9 @@
 
             <TextView
                 android:id="@+id/tvAktieTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/aktie_title"
@@ -1055,7 +1081,7 @@
 
             <TextView
                 android:id="@+id/tvAktieDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -1103,14 +1129,14 @@
  -->
             <TextView
                 android:id="@+id/btnStrongBuy1"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="@dimen/_160sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginVertical="@dimen/_5sdp"
+                android:background="@drawable/button_background"
+                android:gravity="center"
                 android:text="@string/strong"
                 android:textAllCaps="true"
-                android:gravity="center"
-                android:background="@drawable/button_background"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1119,10 +1145,9 @@
 
             <TextView
                 android:id="@+id/tvHaftungsausschlussTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/haftungsausschluss_title"
@@ -1136,7 +1161,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvHaftungsausschlussDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -1158,10 +1183,9 @@
 
             <TextView
                 android:id="@+id/tvEnthaftungserklarungTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/enthaftungserklarung_title"
@@ -1175,7 +1199,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvEnthaftungserklarungDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -1197,7 +1221,7 @@
 
             <TextView
                 android:id="@+id/tvOffenlegungTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -1213,7 +1237,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvOffenlegungDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -1236,7 +1260,7 @@
 
             <TextView
                 android:id="@+id/tvBewertungTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -1252,7 +1276,7 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvBewertungDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
@@ -1274,10 +1298,9 @@
 
             <TextView
                 android:id="@+id/tvAdressatenTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/adressaten_title"
@@ -1290,7 +1313,7 @@
 
             <TextView
                 android:id="@+id/tvAdressatenDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -1305,7 +1328,7 @@
 
             <TextView
                 android:id="@+id/tvInformationsquellenTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
@@ -1321,7 +1344,7 @@
 
             <TextView
                 android:id="@+id/tvInformationsquellenDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 

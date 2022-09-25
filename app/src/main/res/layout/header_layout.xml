@@ -9,14 +9,13 @@
         style="@style/TextViewStyleDmSansRegular.12sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autoLink="web"
         android:background="@color/colorLightGrey"
         android:gravity="center"
-        android:linksClickable="true"
         android:paddingVertical="@dimen/_12sdp"
+        android:clickable="true"
+        android:focusable="true"
         android:text="@string/header_link"
-        android:textColor="@color/colorDarkCyn"
-        android:textIsSelectable="true"
+        android:textColor="@color/colorCyn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -38,7 +37,7 @@
 
         <TextView
             android:id="@+id/tvTitle"
-            style="@style/TextViewStyle.14sdp"
+            style="@style/TextViewStyle.16sdp"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="wrap_content"
             android:gravity="center|start"
@@ -54,11 +53,10 @@
 
         <TextView
             android:id="@+id/tvStrongBuy"
-            style="@style/TextViewStyle.12sdp"
+            style="@style/TextViewStyleDmSansRegular.12sdp"
             android:layout_width="@dimen/_110sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_height="@dimen/_28sdp"
             android:background="@drawable/button_background"
-            android:fontFamily="@font/dm_sans_regular"
             android:gravity="center"
             android:text="@string/strong"
             android:layout_marginHorizontal="@dimen/_5sdp"
@@ -74,7 +72,7 @@
 
     <TextView
         android:id="@+id/tvDate"
-        style="@style/TextViewStyle.12sdp"
+        style="@style/TextViewStyle.14sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="2"

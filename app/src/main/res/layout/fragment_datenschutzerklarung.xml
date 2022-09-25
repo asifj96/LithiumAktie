@@ -4,6 +4,7 @@
 
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
@@ -24,7 +25,7 @@
 
             <TextView
                 android:id="@+id/tvDatenschutzerklarungTitle"
-                style="@style/TextViewStyle.16sdp"
+                style="@style/TextViewStyle.18sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -39,7 +40,7 @@
 
             <TextView
                 android:id="@+id/tvDatenschutzerklarungDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
@@ -54,7 +55,7 @@
 
             <TextView
                 android:id="@+id/tvVeranTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -70,7 +71,7 @@
 
             <TextView
                 android:id="@+id/tvVeranDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
@@ -85,7 +86,7 @@
 
             <TextView
                 android:id="@+id/tvErhebungTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -101,7 +102,7 @@
 
             <TextView
                 android:id="@+id/tvErhebungDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
@@ -116,7 +117,7 @@
 
             <TextView
                 android:id="@+id/tvKontakTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -132,7 +133,7 @@
 
             <TextView
                 android:id="@+id/tvKontakDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
@@ -147,7 +148,7 @@
 
             <TextView
                 android:id="@+id/tvIhreTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -163,7 +164,7 @@
 
             <TextView
                 android:id="@+id/tvIhreDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
@@ -178,7 +179,7 @@
 
             <TextView
                 android:id="@+id/tvWiderrufTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -194,11 +195,9 @@
 
             <TextView
                 android:id="@+id/tvWiderrufDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
                 android:fontFamily="@font/dm_sans_bold"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -211,7 +210,7 @@
 
             <TextView
                 android:id="@+id/tvWeitergabeTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -227,7 +226,7 @@
 
             <TextView
                 android:id="@+id/tvWeitergabeDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
@@ -242,7 +241,7 @@
 
             <TextView
                 android:id="@+id/tvNewsletterTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -258,7 +257,7 @@
 
             <TextView
                 android:id="@+id/tvNewsletterDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -276,7 +275,7 @@
 
             <TextView
                 android:id="@+id/tvServerLogTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -292,7 +291,7 @@
 
             <TextView
                 android:id="@+id/tvServerLogDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"
@@ -307,7 +306,7 @@
 
             <TextView
                 android:id="@+id/tvEinsatzTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -323,7 +322,7 @@
 
             <TextView
                 android:id="@+id/tvEinsatzDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -341,7 +340,7 @@
 
             <TextView
                 android:id="@+id/tvWebAnalyseTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -357,7 +356,7 @@
 
             <TextView
                 android:id="@+id/tvGoogleAnalyticsTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -373,7 +372,7 @@
 
             <TextView
                 android:id="@+id/tvGoogleAnalyticsDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -390,7 +389,7 @@
 
             <TextView
                 android:id="@+id/tvKonversionTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -406,7 +405,7 @@
 
             <TextView
                 android:id="@+id/tvKonversionDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -423,7 +422,7 @@
 
             <TextView
                 android:id="@+id/tvDoubleClickTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -438,7 +437,7 @@
 
             <TextView
                 android:id="@+id/tvDoubleClickDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -455,7 +454,7 @@
 
             <TextView
                 android:id="@+id/tvHotjarTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -472,7 +471,7 @@
 
             <TextView
                 android:id="@+id/tvHotjarDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -490,7 +489,7 @@
 
             <TextView
                 android:id="@+id/tvVonFacebookTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -506,7 +505,7 @@
 
             <TextView
                 android:id="@+id/tvVonFacebookDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -523,7 +522,7 @@
 
             <TextView
                 android:id="@+id/tvFacebookAudiencesTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -539,7 +538,7 @@
 
             <TextView
                 android:id="@+id/tvFacebookAudiencesDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -556,7 +555,7 @@
 
             <TextView
                 android:id="@+id/tvPlistaTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -572,7 +571,7 @@
 
             <TextView
                 android:id="@+id/tvPlistaDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -589,7 +588,7 @@
 
             <TextView
                 android:id="@+id/tvSocialMediaTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -605,7 +604,7 @@
 
             <TextView
                 android:id="@+id/tvSocialMediaDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -622,7 +621,7 @@
 
             <TextView
                 android:id="@+id/tvEmbeddingYoutubeTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -638,7 +637,7 @@
 
             <TextView
                 android:id="@+id/tvEmbeddingYoutubeDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autoLink="web"
@@ -655,7 +654,7 @@
 
             <TextView
                 android:id="@+id/tvWebsiteLinksTitle"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
@@ -671,7 +670,7 @@
 
             <TextView
                 android:id="@+id/tvWebsiteLinksDescription"
-                style="@style/TextViewStyleDmSansRegular.12sdp"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_bold"

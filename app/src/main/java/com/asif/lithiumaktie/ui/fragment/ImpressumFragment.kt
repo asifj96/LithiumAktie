@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.asif.lithiumaktie.MainActivity.Companion.activityMainBinding
 import com.asif.lithiumaktie.R
 import com.asif.lithiumaktie.common.getCurrentDate
 import com.asif.lithiumaktie.databinding.FragmentImpressumBinding

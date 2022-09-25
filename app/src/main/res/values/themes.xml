@@ -67,11 +67,23 @@
     <style name="TextViewStyleDmSansBold.12sdp" parent="parentTextViewDmSansBold">
         <item name="android:textSize">@dimen/_12sdp</item>
     </style>
+    <style name="TextViewStyleDmSansBold.14sdp" parent="parentTextViewDmSansBold">
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+    <style name="TextViewStyleDmSansBold.16sdp" parent="parentTextViewDmSansBold">
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
     <style name="TextViewStyleDmSansRegular.12sdp" parent="parentTextViewDmSansRegular">
         <item name="android:textSize">@dimen/_12sdp</item>
     </style>
+    <style name="TextViewStyleDmSansRegular.10sdp" parent="parentTextViewDmSansRegular">
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
     <style name="TextViewStyleDmSansRegular.14sdp" parent="parentTextViewDmSansRegular">
         <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+    <style name="TextViewStyleDmSansRegular.16sdp" parent="parentTextViewDmSansRegular">
+        <item name="android:textSize">@dimen/_16sdp</item>
     </style>
 
     <style name="TextViewStyle.28sdp" parent="parentTextViewZilla">
