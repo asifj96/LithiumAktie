@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.asif.lithiumaktie.R
 import com.asif.lithiumaktie.common.getCurrentDate
+import com.asif.lithiumaktie.common.openStrongBuy
 import com.asif.lithiumaktie.databinding.FragmentDatenschutzerklarungBinding
 import kotlinx.android.synthetic.main.header_layout.view.*
 
@@ -33,6 +34,7 @@ class DatenschutzerklarungFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mBinding.headerMain.tvDate.text = "Aktientipp ${requireContext().getCurrentDate()}"
+        mBinding.headerMain.tvStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }
 
     }
 }

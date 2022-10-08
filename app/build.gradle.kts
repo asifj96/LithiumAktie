@@ -6,6 +6,7 @@ plugins {
     id(Plugins.googleServices)
     id(Plugins.firebaseCrashlytics)
     id(Plugins.navigationSafeArgs)
+    id(Plugins.firebasePerformance)
     id("org.jetbrains.kotlin.android")
 }
 
@@ -13,7 +14,7 @@ android {
     compileSdk = Versions.compileSdk
 
     defaultConfig {
-        applicationId = "com.asif.lithiumaktie"
+        applicationId = "com.Arbor.lithiumaktie"
         minSdk = Versions.minSdk
         targetSdk = Versions.targetSdk
         versionCode = Versions.versionCode
@@ -79,6 +80,7 @@ dependencies {
     implementation(Firebase.firebaseAnalytics)
     implementation(Firebase.firebaseConfig)
     implementation(Firebase.firebaseInstallations)
+    implementation(Firebase.firebasePerformance)
 
     // Glide
     implementation(Glide.glide)
@@ -103,6 +105,13 @@ dependencies {
     implementation ("com.google.android.exoplayer:exoplayer-core:2.11.5")
     implementation ("com.google.android.exoplayer:exoplayer-dash:2.11.5")
     implementation ("com.google.android.exoplayer:exoplayer-ui:2.11.5")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
+    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+    implementation(Gson.gson)
+
 }
 kapt {
     correctErrorTypes = true

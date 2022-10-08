@@ -12,7 +12,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorLightGrey">
+            android:background="@color/colorWhite">
 
             <include
                 android:id="@+id/headerMain"
@@ -43,9 +43,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_bold"
+                android:gravity="center_horizontal"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_12sdp"
-                android:gravity="center_horizontal"
                 android:text="@string/header_image_title"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
@@ -65,6 +65,7 @@
                 android:text="@string/header_image_description"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
+                android:visibility="gone"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderImageTitle" />
 
@@ -122,16 +123,140 @@
                 app:layout_constraintTop_toBottomOf="@id/tvShareArticle" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cLKaufemp"
+                android:id="@+id/cLJetzt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_10sdp"
                 android:layout_marginVertical="@dimen/_10sdp"
-                android:background="@drawable/grey_outline"
+                android:background="@drawable/cyn_outline"
                 android:elevation="@dimen/_2sdp"
                 app:layout_constraintEnd_toStartOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAnlegerstudie">
+
+                <TextView
+                    android:id="@+id/tvJetztTitle"
+                    style="@style/TextViewStyleDmSansBold.16sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/jetzt_background"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:text="@string/jetzt_title"
+                    android:textColor="@color/colorWhite"
+                    android:textIsSelectable="true"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvJetztDescription"
+                    style="@style/TextViewStyleDmSansBold.14sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/jetzt_description"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvJetztTitle" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLJetztEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:background="@drawable/bg_edit_text"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvJetztDescription">
+
+
+                    <EditText
+                        android:id="@+id/edtEmail"
+                        style="@style/TextViewStyleDmSansBold.12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="@string/email_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_5sdp"
+                        android:textColorHint="@color/colorGreyEditText"
+                        android:textCursorDrawable="@drawable/edit_text_cursor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvJetztFormSubmit"
+                    style="@style/TextViewStyleDmSansRegular.12sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/form_submit"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cLJetztEmail" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLJetztSubmitEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvJetztFormSubmit">
+
+
+                    <TextView
+                        android:id="@+id/tvJetztSubmit"
+                        style="@style/TextViewStyleDmSansBold.16sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/jetzt_btn_background"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:text="@string/jetzt_submit"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLKaufemp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_16sdp"
+                android:background="@drawable/grey_outline"
+                android:elevation="@dimen/_2sdp"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cLJetzt">
 
 
                 <TextView
@@ -431,7 +556,7 @@
                 android:text="@string/kauf_info"
                 android:textIsSelectable="true"
                 app:animDuration="500"
-                app:collapsedLines="6"
+                app:collapsedLines="17"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -456,10 +581,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvKaufInfo" />
 
-            <TextView
+            <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvOhneLithiumDescription"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -467,8 +592,44 @@
                 android:text="@string/ohne_lithium_description"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="8"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvInvestorenTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/investroen"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription" />
+
+            <TextView
+                android:id="@+id/tvInvestroenDescription"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/investroen_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInvestorenTitle" />
 
             <ImageView
                 android:id="@+id/IvOhneLithiumImage"
@@ -483,26 +644,26 @@
                 android:src="@drawable/ic_ohne_lithium_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription" />
+                app:layout_constraintTop_toBottomOf="@id/tvInvestroenDescription" />
 
 
             <TextView
                 android:id="@+id/tvOhneLithiumDescription1"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/ohne_lithium_description_1"
                 android:textColor="@color/colorDarkGrey"
-                android:gravity="center_horizontal"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvOhneLithiumImage" />
 
-            <io.github.glailton.expandabletextview.ExpandableTextView
+            <TextView
                 android:id="@+id/tvOhneLithiumDescription2"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
@@ -512,16 +673,9 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/ohne_lithium_description_2"
                 android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="5"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription1"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription1" />
 
             <TextView
                 android:id="@+id/tvWarumDieTitle"
@@ -538,10 +692,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription2" />
 
-            <TextView
+            <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvWarumDieDescription1"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -549,8 +703,52 @@
                 android:text="@string/warum_die_description_1"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="10"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvWarumDieTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvEuropaTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/europa_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription1" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvEuropaDescription"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/europa_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                app:animDuration="500"
+                app:collapsedLines="8"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvEuropaTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
 
             <ImageView
                 android:id="@+id/IvWarmDieImage"
@@ -565,21 +763,21 @@
                 android:src="@drawable/warm_die_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription1" />
+                app:layout_constraintTop_toBottomOf="@id/tvEuropaDescription" />
 
 
             <TextView
                 android:id="@+id/tvWarumDieDescription3"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/warum_die_description_3"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
-                android:gravity="center_horizontal"
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvWarmDieImage" />
@@ -587,7 +785,7 @@
             <TextView
                 android:id="@+id/tvWarumDieDescription2"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -613,7 +811,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription2" />
 
-            <io.github.glailton.expandabletextview.ExpandableTextView
+            <TextView
                 android:id="@+id/tvRegierungenDescription1"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
@@ -623,16 +821,99 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/regierungen_description_1"
                 android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="5"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenTitle" />
+
+
+            <TextView
+                android:id="@+id/tvGesetzTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/gesetz_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription1" />
+
+            <TextView
+                android:id="@+id/tvGesetzDescription"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/gesetz_description"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGesetzTitle" />
+
+            <TextView
+                android:id="@+id/tvZuarborTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/zuarbor_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGesetzDescription" />
+
+
+            <TextView
+                android:id="@+id/tvZuarborDescription"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/zuarbor_description"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvZuarborTitle" />
+
+            <TextView
+                android:id="@+id/tvMillersCrossingTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/millers_crossing_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvZuarborDescription" />
+
+            <TextView
+                android:id="@+id/tvMillersCrossingDescription"
+                style="@style/TextViewStyleDmSansRegular.14sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:lineSpacingExtra="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:text="@string/millers_crossing_description"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMillersCrossingTitle" />
+
 
             <ImageView
                 android:id="@+id/IvRegierungenImage"
@@ -647,98 +928,48 @@
                 android:src="@drawable/regierungen_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription1" />
+                app:layout_constraintTop_toBottomOf="@id/tvMillersCrossingDescription" />
 
             <TextView
                 android:id="@+id/tvRegierungenDescription2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/regierungen_description_2"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
-                android:gravity="center_horizontal"
                 android:textSize="@dimen/_14sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvRegierungenImage" />
 
+            <TextView
+                android:id="@+id/tvJarnetTitle"
+                style="@style/TextViewStyle.16sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/jarnet_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textIsSelectable="true"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription2" />
+
             <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvRegierungenDescription3"
+                android:id="@+id/tvJarnetDescription"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/regierungen_description_3"
-                android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="10"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription2"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvEsgibtTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/es_gibt_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription3" />
-
-            <TextView
-                android:id="@+id/tvEsgibtDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/es_gibt_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEsgibtTitle" />
-
-            <TextView
-                android:id="@+id/tvWoistTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/woist_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEsgibtDescription" />
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvWoistDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/tv_wost_description"
+                android:text="@string/jarnet_description"
                 android:textIsSelectable="true"
                 app:animDuration="500"
                 app:collapsedLines="8"
@@ -746,44 +977,14 @@
                 app:isExpanded="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWoistTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvJarnetTitle"
                 app:readLessText="Lese weniger"
                 app:readMoreText="Weiterlesen"
                 app:textMode="line" />
 
-            <TextView
-                android:id="@+id/tvWasIstTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/wasIst_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWoistDescription" />
-
-            <TextView
-                android:id="@+id/tvWasIstDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/was_ist_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWasIstTitle" />
 
             <ImageView
-                android:id="@+id/IvWasItImage"
+                android:id="@+id/IvAbbauImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -792,325 +993,86 @@
                 android:contentDescription="@string/app_name"
                 android:elevation="@dimen/_2sdp"
                 android:scaleType="fitXY"
-                android:src="@drawable/was_ist_icon"
+                android:src="@drawable/abbau_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription" />
+                app:layout_constraintTop_toBottomOf="@id/tvJarnetDescription" />
 
             <TextView
-                android:id="@+id/tvWasIstDescription2"
-                android:layout_width="0dp"
+                android:id="@+id/tvAbbauDescription"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/was_ist_description_2"
+                android:text="@string/abbau_description"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 android:textSize="@dimen/_14sdp"
-                android:gravity="center_horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvWasItImage" />
+                app:layout_constraintTop_toBottomOf="@id/IvAbbauImage" />
+
 
             <TextView
-                android:id="@+id/tvWasIstDescription1"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/was_ist_description_1"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription2" />
-
-            <TextView
-                android:id="@+id/tvLithiumTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/lithium_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWasIstDescription1" />
-
-            <TextView
-                android:id="@+id/tvLithiumDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/litium_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLithiumTitle" />
-
-            <TextView
-                android:id="@+id/tvAuswirkungenTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/auswirkungen_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLithiumDescription" />
-
-            <TextView
-                android:id="@+id/tvAuswirkungenDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/auswirkungen_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenTitle" />
-
-            <ImageView
-                android:id="@+id/IvAuswirkungenImage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/auswirkungen_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenDescription" />
-
-            <TextView
-                android:id="@+id/tvAuswirkungenDescription1"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/dm_sans_medium"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/auswirkungen_description1"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:gravity="center_horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvAuswirkungenImage" />
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvAuswirkungenDescription2"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/auswirkungen_description_2"
-                android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="5"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenDescription1"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvArborTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/arbor_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAuswirkungenDescription2" />
-
-            <TextView
-                android:id="@+id/tvArborDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/arbor_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvArborTitle" />
-
-            <TextView
-                android:id="@+id/tvMillersTitle"
+                android:id="@+id/tvWeshalbTitle"
                 style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/millers_title"
+                android:text="@string/weshalb_title"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvArborDescription" />
+                app:layout_constraintTop_toBottomOf="@id/tvAbbauDescription" />
 
             <TextView
-                android:id="@+id/tvMillersDescription"
+                android:id="@+id/tvWeshalbDescription"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/millers_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMillersTitle" />
-
-            <ImageView
-                android:id="@+id/IvMillersImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_millers_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMillersDescription" />
-
-            <TextView
-                android:id="@+id/tvMillersDescription_1"
-                android:textSize="@dimen/_14sdp"
-                android:fontFamily="@font/dm_sans_medium"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
-                android:gravity="center_horizontal"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/millers_description_1"
+                android:text="@string/weshalb_description"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvMillersImage" />
+                app:layout_constraintTop_toBottomOf="@id/tvWeshalbTitle" />
 
             <TextView
-                android:id="@+id/tvKandaTitle"
+                android:id="@+id/tvKauftTitle"
                 style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/kanda_title"
+                android:text="@string/kauft_title"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMillersDescription_1" />
+                app:layout_constraintTop_toBottomOf="@id/tvWeshalbDescription" />
 
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvKandaDescription"
+            <TextView
+                android:id="@+id/tvKauftDescription"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-
-                android:lineSpacingExtra="@dimen/_5sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/kanda_description"
-                android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="5"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvKandaTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvAktieTitle"
-                style="@style/TextViewStyle.16sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/aktie_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvKandaDescription" />
-
-            <TextView
-                android:id="@+id/tvAktieDescription"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/aktie_description"
+                android:text="@string/kauft_description"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAktieTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvKauftTitle" />
 
-
-            <!--            <androidx.media3.ui.PlayerView
-                            android:id="@+id/video_view"
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/_200sdp"
-                            android:paddingHorizontal="@dimen/_8sdp"
-                            android:paddingVertical="@dimen/_5sdp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tvAktieDescription" />-->
             <com.google.android.exoplayer2.ui.PlayerView
                 android:id="@+id/video_view"
                 android:layout_width="match_parent"
@@ -1120,20 +1082,8 @@
                 android:paddingVertical="@dimen/_5sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAktieDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/tvKauftDescription" />
 
-            <!-- <VideoView
-                 android:id="@+id/video_view"
-                 android:layout_width="match_parent"
-                 android:layout_height="@dimen/_200sdp"
-                 android:gravity="center"
-                 android:paddingHorizontal="@dimen/_8sdp"
-                 android:paddingVertical="@dimen/_5sdp"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 android:visibility="invisible"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintTop_toBottomOf="@+id/tvAktieDescription" />
- -->
             <TextView
                 android:id="@+id/btnStrongBuy1"
                 style="@style/TextViewStyleDmSansRegular.14sdp"
@@ -1172,7 +1122,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/kanda_description"
@@ -1363,6 +1312,145 @@
                 android:textIsSelectable="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenTitle" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cLFooter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightGrey"
+                android:padding="@dimen/_16sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenDescription">
+
+                <TextView
+                    android:id="@+id/tvFooterTitle"
+                    style="@style/TextViewStyle.18sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/zilla_slab_bold"
+                    android:gravity="center_horizontal"
+                    android:text="@string/footer_title"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvFooterDescription"
+                    style="@style/TextViewStyleDmSansRegular.14sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/footer_description"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFooterTitle" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLFooterEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFooterDescription">
+
+
+                    <EditText
+                        android:id="@+id/edtFooterEmail"
+                        style="@style/TextViewStyleDmSansBold.12sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="@string/email_footer_hint"
+                        android:importantForAutofill="no"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/_5sdp"
+                        android:textColorHint="@color/colorGreyEditText"
+                        android:textCursorDrawable="@drawable/edit_text_cursor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvFooterFormSubmit"
+                    style="@style/TextViewStyleDmSansRegular.12sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/form_submit"
+                    android:visibility="gone"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cLFooterEmail" />
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/footerCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFooterFormSubmit"/>
+
+                <TextView
+                    android:id="@+id/tvFooterCheckBoxDescription"
+                    style="@style/TextViewStyleDmSansRegular.14sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/_2sdp"
+                    android:gravity="start"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:text="@string/footer_checkbox_description"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textIsSelectable="true"
+                    app:layout_constraintStart_toEndOf="@id/footerCheckbox"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFooterFormSubmit" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cLFooterSubmitEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFooterCheckBoxDescription">
+
+
+                    <TextView
+                        android:id="@+id/tvFooterSubmit"
+                        style="@style/TextViewStyleDmSansBold.16sdp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/jetzt_btn_background"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_8sdp"
+                        android:text="@string/footer_submit"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

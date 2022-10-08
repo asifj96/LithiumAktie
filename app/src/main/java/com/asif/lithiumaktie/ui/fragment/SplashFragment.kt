@@ -52,6 +52,7 @@ class SplashFragment : Fragment() {
 
     override fun onPause() {
         splashHandler.removeCallbacks(splashRunnable)
+        splashHandler.removeCallbacksAndMessages(null)
         super.onPause()
     }
 }

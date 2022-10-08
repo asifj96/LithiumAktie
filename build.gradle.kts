@@ -13,6 +13,7 @@ buildscript {
         classpath(Classpath.googleServices)
         classpath(Classpath.firebaseCrashlytics)
         classpath(Classpath.navigationGradlePlugin)
+        classpath(Classpath.firebasePerformance)
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
     }
 }

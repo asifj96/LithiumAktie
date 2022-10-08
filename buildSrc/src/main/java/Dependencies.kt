@@ -2,8 +2,8 @@ object Versions {
     const val minSdk = 21
     const val compileSdk = 32
     const val targetSdk = 32
-    const val versionCode = 3
-    const val versionName = "1.3"
+    const val versionCode = 4
+    const val versionName = "1.4"
     const val coreKtx = "1.7.0"
     const val appCompat = "1.5.1"
     const val materialDesign = "1.6.1"
@@ -13,6 +13,8 @@ object Versions {
     const val espressoCore = "3.4.0"
     const val jvmTarget = "1.8"
     const val firebaseBom = "29.0.1"
+    const val firebasePerformance = "1.4.1"
+    const val gson = "2.8.8"
     const val gradle = "7.0.3"
     const val gradlePlugin = "1.6.0"
     const val lifecycle = "2.4.1"
@@ -64,6 +66,7 @@ object Firebase {
     const val firebaseBom = "com.google.firebase:firebase-bom:${Versions.firebaseBom}"
     const val firebaseCrashlytics = "com.google.firebase:firebase-crashlytics-ktx"
     const val firebaseAnalytics = "com.google.firebase:firebase-analytics-ktx"
+    const val firebasePerformance = "com.google.firebase:firebase-perf-ktx"
     const val firebaseConfig = "com.google.firebase:firebase-config-ktx"
     const val firebaseInstallations = "com.google.firebase:firebase-installations-ktx"
 }
@@ -85,6 +88,7 @@ object Plugins {
     const val googleServices = "com.google.gms.google-services"
     const val firebaseCrashlytics = "com.google.firebase.crashlytics"
     const val navigationSafeArgs = "androidx.navigation.safeargs"
+    const val firebasePerformance = "com.google.firebase.firebase-perf"
 }
 
 object Classpath {
@@ -94,6 +98,7 @@ object Classpath {
     const val firebaseCrashlytics =
         "com.google.firebase:firebase-crashlytics-gradle:${Versions.firebaseCrashlytics}"
     //    const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
+    const val firebasePerformance = "com.google.firebase:perf-plugin:${Versions.firebasePerformance}"
     const val navigationGradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.2"
     //"androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationGradlePlugin}"
 }
@@ -101,4 +106,8 @@ object Classpath {
 object Glide {
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glide}"
+}
+object Gson {
+
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
 }
