@@ -100,17 +100,14 @@ dependencies {
     implementation(LifeCycle.runtimeKtx)
 
     implementation("io.github.glailton.expandabletextview:expandabletextview:1.0.2")
-    // Exo Player
-
-    implementation ("com.google.android.exoplayer:exoplayer-core:2.11.5")
-    implementation ("com.google.android.exoplayer:exoplayer-dash:2.11.5")
-    implementation ("com.google.android.exoplayer:exoplayer-ui:2.11.5")
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
     implementation(Gson.gson)
+
+    implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0")
 
 }
 kapt {

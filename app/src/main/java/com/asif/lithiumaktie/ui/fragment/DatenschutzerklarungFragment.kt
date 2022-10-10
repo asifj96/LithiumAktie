@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.asif.lithiumaktie.R
 import com.asif.lithiumaktie.common.getCurrentDate
+import com.asif.lithiumaktie.common.hideKeyboard
 import com.asif.lithiumaktie.common.openStrongBuy
 import com.asif.lithiumaktie.databinding.FragmentDatenschutzerklarungBinding
 import kotlinx.android.synthetic.main.header_layout.view.*
@@ -32,9 +33,17 @@ class DatenschutzerklarungFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if(isAdded)
+            requireActivity().hideKeyboard(mBinding.root)
 
         mBinding.headerMain.tvDate.text = "Aktientipp ${requireContext().getCurrentDate()}"
         mBinding.headerMain.tvStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if(isAdded)
+            requireActivity().hideKeyboard(mBinding.root)
     }
 }

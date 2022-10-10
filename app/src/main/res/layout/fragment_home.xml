@@ -204,9 +204,9 @@
                     style="@style/TextViewStyleDmSansRegular.12sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_5sdp"
-                    android:gravity="center_horizontal"
                     android:text="@string/form_submit"
                     android:textColor="@color/colorDarkGrey"
                     android:textIsSelectable="true"
@@ -278,11 +278,10 @@
 
                 <ImageView
                     android:id="@+id/IvKaufHeaderImage"
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/_200sdp"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/_10sdp"
                     android:adjustViewBounds="true"
-                    android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="@string/app_name"
                     android:elevation="@dimen/_2sdp"
                     android:padding="@dimen/_10sdp"
@@ -365,6 +364,7 @@
                         android:textIsSelectable="true"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.41"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvKaufBranche" />
 
@@ -396,10 +396,13 @@
                         style="@style/TextViewStyleDmSansBold.14sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:autoLink="web"
+                        android:autoLink="none"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_webseite_name"
-                        android:textColorLink="@color/colorDarkCyn"
+                        android:textColor="@color/colorDarkCyn"
                         android:textIsSelectable="true"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -527,7 +530,7 @@
 
                     <TextView
                         android:id="@+id/btnStrongBuy"
-                        style="@style/TextViewStyleDmSansRegular.14sdp"
+                        style="@style/TextViewStyleDmSansRegular.12sdp"
                         android:layout_width="@dimen/_160sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
@@ -735,7 +738,7 @@
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_5sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
+                android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/europa_description"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
@@ -755,6 +758,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:adjustViewBounds="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/app_name"
@@ -988,6 +992,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:adjustViewBounds="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/app_name"
@@ -1021,7 +1026,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/weshalb_title"
                 android:textColor="@color/colorDarkGrey"
                 android:textIsSelectable="true"
@@ -1073,23 +1077,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvKauftTitle" />
 
-            <com.google.android.exoplayer2.ui.PlayerView
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/video_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp"
                 android:gravity="center"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
+                app:autoPlay="false"
+                app:handleNetworkEvents="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvKauftDescription" />
+                app:layout_constraintTop_toBottomOf="@+id/tvKauftDescription"
+                app:videoId="Zz5ZXmhJJTs" />
 
             <TextView
                 android:id="@+id/btnStrongBuy1"
-                style="@style/TextViewStyleDmSansRegular.14sdp"
+                style="@style/TextViewStyleDmSansRegular.12sdp"
                 android:layout_width="@dimen/_160sdp"
                 android:layout_height="@dimen/_30sdp"
-                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_10sdp"
                 android:background="@drawable/button_background"
                 android:gravity="center"
                 android:text="@string/strong"
@@ -1100,11 +1107,23 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/video_view" />
 
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginVertical="@dimen/_14sdp"
+                android:background="@color/colorDarkGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnStrongBuy1" />
+
             <TextView
                 android:id="@+id/tvHaftungsausschlussTitle"
                 style="@style/TextViewStyle.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/haftungsausschluss_title"
@@ -1113,7 +1132,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnStrongBuy1" />
+                app:layout_constraintTop_toBottomOf="@id/view6" />
 
 
             <io.github.glailton.expandabletextview.ExpandableTextView
@@ -1139,7 +1158,7 @@
 
             <TextView
                 android:id="@+id/tvEnthaftungserklarungTitle"
-                style="@style/TextViewStyle.16sdp"
+                style="@style/TextViewStyleDmSansBold.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -1177,10 +1196,9 @@
 
             <TextView
                 android:id="@+id/tvOffenlegungTitle"
-                style="@style/TextViewStyle.16sdp"
+                style="@style/TextViewStyleDmSansBold.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/offenlegung_title"
@@ -1216,10 +1234,9 @@
 
             <TextView
                 android:id="@+id/tvBewertungTitle"
-                style="@style/TextViewStyle.16sdp"
+                style="@style/TextViewStyleDmSansBold.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/bewertung_title"
@@ -1254,7 +1271,7 @@
 
             <TextView
                 android:id="@+id/tvAdressatenTitle"
-                style="@style/TextViewStyle.16sdp"
+                style="@style/TextViewStyleDmSansBold.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="@dimen/_8sdp"
@@ -1284,10 +1301,9 @@
 
             <TextView
                 android:id="@+id/tvInformationsquellenTitle"
-                style="@style/TextViewStyle.16sdp"
+                style="@style/TextViewStyleDmSansBold.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/informationsquellen_title"
@@ -1320,6 +1336,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorLightGrey"
                 android:padding="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenDescription">
 
@@ -1328,7 +1345,6 @@
                     style="@style/TextViewStyle.18sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/zilla_slab_bold"
                     android:gravity="center_horizontal"
                     android:text="@string/footer_title"
                     android:textColor="@color/colorDarkGrey"
@@ -1336,16 +1352,16 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvFooterDescription"
                     style="@style/TextViewStyleDmSansRegular.14sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:lineSpacingExtra="@dimen/_5sdp"
                     android:paddingVertical="@dimen/_10sdp"
-                    android:gravity="center_horizontal"
                     android:text="@string/footer_description"
                     android:textColor="@color/colorDarkGrey"
                     android:textIsSelectable="true"
@@ -1365,7 +1381,7 @@
 
                     <EditText
                         android:id="@+id/edtFooterEmail"
-                        style="@style/TextViewStyleDmSansBold.12sdp"
+                        style="@style/TextViewStyleDmSansRegular.12sdp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
@@ -1387,13 +1403,13 @@
                     style="@style/TextViewStyleDmSansRegular.12sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_5sdp"
-                    android:gravity="center_horizontal"
                     android:text="@string/form_submit"
-                    android:visibility="gone"
                     android:textColor="@color/colorDarkGrey"
                     android:textIsSelectable="true"
+                    android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cLFooterEmail" />
 
@@ -1403,21 +1419,21 @@
                     android:layout_height="wrap_content"
                     android:paddingVertical="@dimen/_10sdp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvFooterFormSubmit"/>
+                    app:layout_constraintTop_toBottomOf="@id/tvFooterFormSubmit" />
 
                 <TextView
                     android:id="@+id/tvFooterCheckBoxDescription"
                     style="@style/TextViewStyleDmSansRegular.14sdp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:lineSpacingExtra="@dimen/_2sdp"
                     android:gravity="start"
+                    android:lineSpacingExtra="@dimen/_2sdp"
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/footer_checkbox_description"
                     android:textColor="@color/colorDarkGrey"
                     android:textIsSelectable="true"
-                    app:layout_constraintStart_toEndOf="@id/footerCheckbox"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/footerCheckbox"
                     app:layout_constraintTop_toBottomOf="@id/tvFooterFormSubmit" />
 
 

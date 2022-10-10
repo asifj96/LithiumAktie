@@ -8,9 +8,13 @@ import android.net.Uri
 import android.os.Build
 import android.os.SystemClock
 import android.util.Log
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import com.asif.lithiumaktie.R
+import com.asif.lithiumaktie.dialog.AlertDialog
 import timber.log.Timber
 import java.text.ParseException
 import java.text.SimpleDateFormat
@@ -44,6 +48,13 @@ fun Context.openStrongBuy() {
     val intent = Intent(Intent.ACTION_VIEW, uri)
     this.startActivity(intent)
 }
+
+fun Context.openUrl(url: String) {
+    val uri = Uri.parse(url.replace("www.", "https://"))
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+    this.startActivity(intent)
+}
+
 fun Context.shareApp() {
 
     try {
@@ -75,6 +86,7 @@ fun disableClick(): Boolean {
     mLastClickTime = SystemClock.elapsedRealtime()
     return true
 }
+
 fun Context.isOnline(): Boolean {
     if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
         val connectivityManager =
@@ -94,16 +106,44 @@ fun Context.isOnline(): Boolean {
                 Log.e("tagInternet", "NetworkType : VPN")
                 true
             } else {
-               Log.e("tagInternet", "No internet connection ")
+                Log.e("tagInternet", "No internet connection ")
                 false
             }
         }
     } else {
         val cm =
             this.getSystemService(AppCompatActivity.CONNECTIVITY_SERVICE) as ConnectivityManager
-       Log.e("tagInternet", "NetworkType : Lollipop Device")
+        Log.e("tagInternet", "NetworkType : Lollipop Device")
         return cm.activeNetworkInfo != null && cm.activeNetworkInfo!!.isConnected
     }
     return false
 }
 
+fun Context.showKeyboard() {
+    val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY)
+}
+
+fun Context.hideKeyboard(view: View) {
+    val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    if (imm.isActive)
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
+}
+
+fun showAlertDialog(
+    parentFragmentManager: FragmentManager,
+    msg: String,
+    onClickCallback: () -> Unit
+) {
+
+    val alertDialog =
+        AlertDialog {
+            onClickCallback.invoke()
+        }
+    alertDialog.setMsg(msg)
+    alertDialog.isCancelable = false
+    alertDialog.show(
+        parentFragmentManager,
+        AlertDialog.TAG
+    )
+}

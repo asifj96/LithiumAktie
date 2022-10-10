@@ -1,3 +1,4 @@
+/*
 package com.asif.lithiumaktie.exo_player
 
 import android.annotation.SuppressLint
@@ -121,9 +122,11 @@ class ExoPlayerUtil private constructor() {
             return exoPlayerUtil!!
         }
 
-        /**
+        */
+/**
          * set fullscreen
-         */
+         *//*
+
         @SuppressLint("InlinedApi")
         fun hideSystemUi() {
             videoPlayer?.systemUiVisibility = (View.SYSTEM_UI_FLAG_LOW_PROFILE
@@ -134,4 +137,4 @@ class ExoPlayerUtil private constructor() {
                     or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
         }
     }
-}
+}*/
