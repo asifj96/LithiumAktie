@@ -8,6 +8,7 @@ plugins {
     id(Plugins.navigationSafeArgs)
     id(Plugins.firebasePerformance)
     id("org.jetbrains.kotlin.android")
+    id("com.onesignal.androidsdk.onesignal-gradle-plugin")
 }
 
 android {
@@ -81,6 +82,7 @@ dependencies {
     implementation(Firebase.firebaseConfig)
     implementation(Firebase.firebaseInstallations)
     implementation(Firebase.firebasePerformance)
+    implementation(Firebase.firebaseMessaging)
 
     // Glide
     implementation(Glide.glide)
@@ -108,6 +110,8 @@ dependencies {
     implementation(Gson.gson)
 
     implementation ("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0")
+
+    implementation ("com.onesignal:OneSignal:[4.0.0, 4.99.99]")
 
 }
 kapt {

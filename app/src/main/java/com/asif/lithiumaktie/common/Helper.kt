@@ -38,7 +38,8 @@ fun Context.getCurrentDate(): String {
     } catch (e: ParseException) {
         e.printStackTrace()
     }
-    formatDate = SimpleDateFormat("a MM/dd/yyyy", Locale.getDefault()).format(date!!)
+//    formatDate = SimpleDateFormat("a MM/dd/yyyy", Locale.getDefault()).format(date!!)
+    formatDate = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault()).format(date!!)
 
     return formatDate
 }
@@ -49,8 +50,8 @@ fun Context.openStrongBuy() {
     this.startActivity(intent)
 }
 
-fun Context.openUrl(url: String) {
-    val uri = Uri.parse(url.replace("www.", "https://"))
+fun Context.openUrl() {
+    val uri = Uri.parse("https://arbormetalscorp.com/")
     val intent = Intent(Intent.ACTION_VIEW, uri)
     this.startActivity(intent)
 }

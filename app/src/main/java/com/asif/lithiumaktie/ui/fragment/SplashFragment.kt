@@ -47,12 +47,20 @@ class SplashFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        startHandler()
+        try {
+            startHandler()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     override fun onPause() {
-        splashHandler.removeCallbacks(splashRunnable)
-        splashHandler.removeCallbacksAndMessages(null)
         super.onPause()
+        try {
+            splashHandler.removeCallbacks(splashRunnable)
+            splashHandler.removeCallbacksAndMessages(null)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 }

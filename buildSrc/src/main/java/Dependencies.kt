@@ -2,8 +2,8 @@ object Versions {
     const val minSdk = 21
     const val compileSdk = 32
     const val targetSdk = 32
-    const val versionCode = 1
-    const val versionName = "1.0"
+    const val versionCode = 2
+    const val versionName = "1.1"
     const val coreKtx = "1.7.0"
     const val appCompat = "1.5.1"
     const val materialDesign = "1.6.1"
@@ -69,6 +69,7 @@ object Firebase {
     const val firebasePerformance = "com.google.firebase:firebase-perf-ktx"
     const val firebaseConfig = "com.google.firebase:firebase-config-ktx"
     const val firebaseInstallations = "com.google.firebase:firebase-installations-ktx"
+    const val firebaseMessaging = "com.google.firebase:firebase-messaging-ktx"
 }
 object LifeCycle {
     const val livedataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"

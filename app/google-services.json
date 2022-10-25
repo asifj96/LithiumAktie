@@ -29,6 +29,13 @@
             {
               "client_id": "825863299223-37jv64jlhfjug8lfpcn90murroi4bhks.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "825863299223-0e3qvqmfvodt5rvb10fp1j0itp9d29q4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.arcane.Aktie.Gerrman"
+              }
             }
           ]
         }

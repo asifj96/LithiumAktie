@@ -28,17 +28,27 @@ class ImpressumFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (isAdded)
-            requireActivity().hideKeyboard(mBinding.root)
+        try {
+            if (isAdded)
+                requireActivity().hideKeyboard(mBinding.root)
 
-        mBinding.headerMain.tvDate.text = "Aktientipp ${requireContext().getCurrentDate()}"
-        mBinding.headerMain.tvStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }
+            mBinding.headerMain.tvDate.text = "Aktientipp am ${requireContext().getCurrentDate()}"
+            mBinding.headerMain.tvStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
 
     }
 
     override fun onPause() {
         super.onPause()
-        if (isAdded)
-            requireActivity().hideKeyboard(mBinding.root)
+        try {
+            if (isAdded)
+                requireActivity().hideKeyboard(mBinding.root)
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
     }
 }

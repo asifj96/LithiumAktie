@@ -1,6 +1,5 @@
 package com.asif.lithiumaktie.network
 
-import com.asif.lithiumaktie.model.SubscribeRequest
 import com.asif.lithiumaktie.model.SubscribeResponse
 import com.asif.lithiumaktie.utility.Constants.Companion.APP_REQUEST_TIMEOUT
 import com.asif.lithiumaktie.utility.Constants.Companion.base_url
