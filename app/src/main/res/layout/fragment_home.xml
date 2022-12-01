@@ -7,8 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:fitsSystemWindows="true"
-        >
+        android:fitsSystemWindows="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -48,8 +47,7 @@
                 android:paddingVertical="@dimen/_12sdp"
                 android:text="@string/header_image_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textSize="26sp"
-                android:textIsSelectable="true"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,50 +55,51 @@
 
             <TextView
                 android:id="@+id/tvHeaderImageDescription"
-                style="@style/TextViewStyleDmSansBold.14sdp"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/header_image_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:visibility="gone"
+
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderImageTitle" />
 
 
             <TextView
                 android:id="@+id/tvShareArticle"
-                android:fontFamily="@font/dm_sans_medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
                 android:background="@drawable/share_background"
-                android:textSize="14sp"
+                android:fontFamily="@font/dm_sans_medium"
                 android:paddingHorizontal="@dimen/_18sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/share_article"
                 android:textColor="@color/colorWhite"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderImageDescription" />
 
             <TextView
                 android:id="@+id/tvAnlegerstudie"
-                android:fontFamily="@font/dm_sans_medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_12sdp"
                 android:background="@drawable/outline_bg_1"
-                android:textSize="14sp"
+                android:fontFamily="@font/dm_sans_medium"
                 android:gravity="center"
                 android:maxLines="2"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Anlegerstudie"
                 android:textColor="@color/colorDarkCyn"
-                android:textIsSelectable="true"
+
+                android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@id/tvAktienempfehlung"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvShareArticle" />
@@ -108,19 +107,19 @@
 
             <TextView
                 android:id="@+id/tvAktienempfehlung"
-                android:fontFamily="@font/dm_sans_medium"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
                 android:layout_marginVertical="@dimen/_12sdp"
                 android:background="@drawable/outline_bg_2"
+                android:fontFamily="@font/dm_sans_medium"
                 android:gravity="center"
-                android:textSize="14sp"
                 android:maxLines="2"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Aktienempfehlung"
                 android:textColor="@color/colorCyn"
-                android:textIsSelectable="true"
+
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tvAnlegerstudie"
                 app:layout_constraintTop_toBottomOf="@id/tvShareArticle" />
@@ -139,33 +138,33 @@
 
                 <TextView
                     android:id="@+id/tvJetztTitle"
-                    android:fontFamily="@font/dm_sans_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/jetzt_background"
+                    android:fontFamily="@font/dm_sans_bold"
                     android:gravity="center"
-                    android:textSize="20sp"
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_12sdp"
                     android:text="@string/jetzt_title"
                     android:textColor="@color/colorWhite"
-                    android:textIsSelectable="true"
+
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvJetztDescription"
-                    android:fontFamily="@font/dm_sans_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_bold"
                     android:gravity="center_vertical"
                     android:lineSpacingExtra="@dimen/_5sdp"
-                    android:textSize="16sp"
                     android:padding="@dimen/_10sdp"
                     android:text="@string/jetzt_description"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -186,17 +185,17 @@
 
                     <EditText
                         android:id="@+id/edtEmail"
-                        android:fontFamily="@font/dm_sans_regular"
-                        android:textSize="14sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
+                        android:fontFamily="@font/dm_sans_regular"
                         android:hint="@string/email_hint"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
                         android:padding="@dimen/_5sdp"
                         android:textColorHint="@color/colorGreyEditText"
                         android:textCursorDrawable="@drawable/edit_text_cursor"
+                        android:textSize="14sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -214,7 +213,7 @@
                     android:paddingVertical="@dimen/_5sdp"
                     android:text="@string/form_submit"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
                     android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cLJetztEmail" />
@@ -234,15 +233,15 @@
 
                     <TextView
                         android:id="@+id/tvJetztSubmit"
-                        android:fontFamily="@font/dm_sans_bold"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
                         android:background="@drawable/jetzt_btn_background"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:gravity="center"
                         android:paddingVertical="@dimen/_8sdp"
                         android:text="@string/jetzt_submit"
                         android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -267,17 +266,17 @@
 
                 <TextView
                     android:id="@+id/tvKaufempTitle"
-                    android:fontFamily="@font/dm_sans_bold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/grey_background"
+                    android:fontFamily="@font/dm_sans_bold"
                     android:gravity="center"
                     android:paddingHorizontal="@dimen/_8sdp"
                     android:paddingVertical="@dimen/_8sdp"
                     android:text="@string/kauf_title"
-                    android:textSize="20sp"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -309,28 +308,28 @@
 
                     <TextView
                         android:id="@+id/tvKaufCompany"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="@string/kauf_company"
                         android:textColor="@color/colorDarkCyn"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tvKaufCompanyName"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_company_name"
                         android:textColor="@color/colorDarkGrey"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvKaufCompany" />
@@ -347,28 +346,28 @@
 
                     <TextView
                         android:id="@+id/tvKaufBranche"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="@string/kauf_branche"
                         android:textColor="@color/colorDarkCyn"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/view1" />
 
                     <TextView
                         android:id="@+id/tvKaufBarncheName"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_branche_name"
                         android:textColor="@color/colorDarkGrey"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.41"
                         app:layout_constraintStart_toStartOf="parent"
@@ -385,31 +384,31 @@
 
                     <TextView
                         android:id="@+id/tvKaufWebseite"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="@string/kauf_webseite"
                         android:textColor="@color/colorDarkCyn"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/view2" />
 
                     <TextView
                         android:id="@+id/tvKaufWebseiteName"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_webseite_name"
                         android:textColor="@color/colorDarkCyn"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toTopOf="@id/view3"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/tvKaufWebseite"
-                        app:layout_constraintBottom_toTopOf="@id/view3"/>
+                        app:layout_constraintTop_toBottomOf="@id/tvKaufWebseite" />
 
                     <View
                         android:id="@+id/view3"
@@ -423,30 +422,30 @@
 
                     <TextView
                         android:id="@+id/tvKaufBorsenkennung"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="@string/kauf_borsenkennung"
                         android:textColor="@color/colorDarkCyn"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/view3" />
 
                     <TextView
                         android:id="@+id/tvKaufBorsenkennungName"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:lineSpacingExtra="@dimen/_2sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_borsenkennung_name"
                         android:textColor="@color/colorDarkGrey"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvKaufBorsenkennung" />
@@ -462,30 +461,30 @@
 
                     <TextView
                         android:id="@+id/tvKaufAktuellerKurs"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="@string/kauf_aktueller_kurs"
                         android:textColor="@color/colorDarkCyn"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/view4" />
 
                     <TextView
                         android:id="@+id/tvKaufAktuellerKursName"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:lineSpacingExtra="@dimen/_2sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_aktueller_kurs_name"
                         android:textColor="@color/colorDarkGrey"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvKaufAktuellerKurs" />
@@ -501,30 +500,30 @@
 
                     <TextView
                         android:id="@+id/tvKaufKursziel"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:paddingTop="@dimen/_5sdp"
                         android:text="@string/kauf_kursziel"
                         android:textColor="@color/colorDarkCyn"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/view5" />
 
                     <TextView
                         android:id="@+id/tvKaufKurszielName"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:autoLink="web"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:lineSpacingExtra="@dimen/_2sdp"
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_kursziel_name"
                         android:textColor="@color/colorDarkGrey"
-                        android:textIsSelectable="true"
+
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/tvKaufKursziel" />
@@ -532,16 +531,16 @@
 
                     <TextView
                         android:id="@+id/btnStrongBuy"
-                        android:fontFamily="@font/dm_sans_bold"
-                        android:textSize="16sp"
                         android:layout_width="@dimen/_160sdp"
                         android:layout_height="@dimen/_30sdp"
                         android:layout_marginVertical="@dimen/_5sdp"
                         android:background="@drawable/button_background"
+                        android:fontFamily="@font/dm_sans_bold"
                         android:gravity="center"
                         android:text="@string/strong"
                         android:textAllCaps="true"
                         android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -552,17 +551,16 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvKaufInfo"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/kauf_info"
-                android:textIsSelectable="true"
+                android:textSize="16sp"
                 app:animDuration="500"
-                app:collapsedLines="15"
+                app:collapsedLines="8"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -574,429 +572,254 @@
 
             <TextView
                 android:id="@+id/tvOhneLithiumTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/ohne_lithium"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvKaufInfo" />
 
-            <io.github.glailton.expandabletextview.ExpandableTextView
+            <TextView
                 android:id="@+id/tvOhneLithiumDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/ohne_lithium_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="7"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle" />
 
             <TextView
                 android:id="@+id/tvInvestorenTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/investroen"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription" />
 
-            <TextView
+            <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvInvestroenDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/investroen_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="16sp"
+                app:animDuration="500"
+                app:collapsedLines="9"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvInvestorenTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvInvestorenTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
 
-            <ImageView
-                android:id="@+id/IvOhneLithiumImage"
+
+            <TextView
+                android:id="@+id/tvInvestorenTitle_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_ohne_lithium_icon"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/investroen_1"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInvestroenDescription" />
 
-
             <TextView
-                android:id="@+id/tvOhneLithiumDescription1"
+                android:id="@+id/tvInvestroenDescription_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_medium"
-                android:textSize="16sp"
-                android:gravity="center_horizontal"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/ohne_lithium_description_1"
+                android:text="@string/investroen_description_1"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvOhneLithiumImage" />
-
-            <TextView
-                android:id="@+id/tvOhneLithiumDescription2"
-                android:fontFamily="@font/dm_sans_regular"
                 android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/ohne_lithium_description_2"
-                android:textIsSelectable="true"
-                android:textColor="@color/colorDarkGrey"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription1" />
+                app:layout_constraintTop_toBottomOf="@id/tvInvestorenTitle_1" />
 
             <TextView
-                android:id="@+id/tvWarumDieTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
+                android:id="@+id/tvRegierungenTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/warum_die"
+                android:text="@string/regierungen_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription2" />
+                app:layout_constraintTop_toBottomOf="@id/tvInvestroenDescription_1" />
 
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvWarumDieDescription1"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
+            <TextView
+                android:id="@+id/tvRegierungenDescription1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/warum_die_description_1"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="10"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvEuropaTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/europa_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription1" />
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvEuropaDescription"
-                android:fontFamily="@font/dm_sans_regular"
                 android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
-                android:text="@string/europa_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:animDuration="500"
-                app:collapsedLines="8"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEuropaTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenTitle" />
 
 
             <ImageView
-                android:id="@+id/IvWarmDieImage"
+                android:id="@+id/IvRegierungenImage_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:adjustViewBounds="true"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/app_name"
                 android:elevation="@dimen/_2sdp"
                 android:scaleType="fitXY"
-                android:src="@drawable/warm_die_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEuropaDescription" />
-
-
-            <TextView
-                android:id="@+id/tvWarumDieDescription3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_medium"
-                android:gravity="center_horizontal"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/warum_die_description_3"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvWarmDieImage" />
-
-            <TextView
-                android:id="@+id/tvWarumDieDescription2"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/warum_die_description_2"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription3" />
-
-            <TextView
-                android:id="@+id/tvRegierungenTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/regierungen_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription2" />
-
-            <TextView
-                android:id="@+id/tvRegierungenDescription1"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:textColor="@color/colorDarkGrey"
-                android:text="@string/regierungen_description_1"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenTitle" />
-
-
-            <TextView
-                android:id="@+id/tvGesetzTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/gesetz_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:src="@drawable/ic_energie_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription1" />
 
             <TextView
-                android:id="@+id/tvGesetzDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
+                android:id="@+id/tvRegierungenDescription_1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:textColor="@color/colorDarkGrey"
-                android:text="@string/gesetz_description"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvGesetzTitle" />
-
-            <TextView
-                android:id="@+id/tvZuarborTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/zuarbor_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvGesetzDescription" />
-
-
-            <TextView
-                android:id="@+id/tvZuarborDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:textColor="@color/colorDarkGrey"
-                android:text="@string/zuarbor_description"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvZuarborTitle" />
-
-            <TextView
-                android:id="@+id/tvMillersCrossingTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/millers_crossing_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvZuarborDescription" />
-
-            <TextView
-                android:id="@+id/tvMillersCrossingDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:textColor="@color/colorDarkGrey"
-                android:text="@string/millers_crossing_description"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMillersCrossingTitle" />
-
-
-            <ImageView
-                android:id="@+id/IvRegierungenImage"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/regierungen_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvMillersCrossingDescription" />
-
-            <TextView
-                android:id="@+id/tvRegierungenDescription2"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_medium"
                 android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/regierungen_description_2"
+                android:text="@string/regierungen_des_1"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvRegierungenImage" />
+                app:layout_constraintTop_toBottomOf="@id/IvRegierungenImage_1" />
+
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvZuarborDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/zuarbor_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:animDuration="500"
+                app:collapsedLines="11"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription_1"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+
+            <ImageView
+                android:id="@+id/IvRegierungenImage_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_welt_lithium_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvZuarborDescription" />
+
+            <TextView
+                android:id="@+id/tvRegierungenDescription_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/regierungen_des_2"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvRegierungenImage_2" />
+
+            <TextView
+                android:id="@+id/tvRegierungenDescription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/warum_die_description_5"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription_2" />
 
             <TextView
                 android:id="@+id/tvJarnetTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/jarnet_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription2" />
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvJarnetDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
-                android:textColor="@color/colorDarkGrey"
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/jarnet_description"
-                android:textIsSelectable="true"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
                 app:animDuration="500"
-                app:collapsedLines="8"
+                app:collapsedLines="6"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1007,8 +830,141 @@
                 app:textMode="line" />
 
 
+            <TextView
+                android:id="@+id/tvWeshalbTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/weshalb_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJarnetDescription" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvWeshalbDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/weshalb_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:animDuration="500"
+                app:collapsedLines="5"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWeshalbTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvKauftTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/kauft_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvWeshalbDescription" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvKauftDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/kauft_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:animDuration="500"
+                app:collapsedLines="8"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKauftTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvDasTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/das_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKauftDescription" />
+
+            <io.github.glailton.expandabletextview.ExpandableTextView
+                android:id="@+id/tvDasDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/das_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:animDuration="500"
+                app:collapsedLines="5"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDasTitle"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line" />
+
+            <TextView
+                android:id="@+id/tvVonArborTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/von_arbor_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDasDescription" />
+
+            <TextView
+                android:id="@+id/tvVonArborDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/von_arbor_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVonArborTitle" />
+
             <ImageView
-                android:id="@+id/IvAbbauImage"
+                android:id="@+id/IvDasImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_8sdp"
@@ -1018,13 +974,13 @@
                 android:contentDescription="@string/app_name"
                 android:elevation="@dimen/_2sdp"
                 android:scaleType="fitXY"
-                android:src="@drawable/abbau_icon"
+                android:src="@drawable/ic_das_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvJarnetDescription" />
+                app:layout_constraintTop_toBottomOf="@id/tvVonArborDescription" />
 
             <TextView
-                android:id="@+id/tvAbbauDescription"
+                android:id="@+id/tvDasDescription_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_medium"
@@ -1032,99 +988,197 @@
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/abbau_description"
+                android:text="@string/das_des_1"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvAbbauImage" />
-
+                app:layout_constraintTop_toBottomOf="@id/IvDasImage" />
 
             <TextView
-                android:id="@+id/tvWeshalbTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
+                android:id="@+id/tvDasDescription_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:text="@string/weshalb_title"
-                android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvAbbauDescription" />
-
-            <TextView
-                android:id="@+id/tvWeshalbDescription"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/weshalb_description"
+                android:text="@string/das_Description_2"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWeshalbTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvDasDescription_1" />
+
 
             <TextView
-                android:id="@+id/tvKauftTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
+                android:id="@+id/tvBigSmokyTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/kauft_title"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/big_smoky_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWeshalbDescription" />
+                app:layout_constraintTop_toBottomOf="@id/tvDasDescription_2" />
 
             <TextView
-                android:id="@+id/tvKauftDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
+                android:id="@+id/tvSmokyDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/kauft_description"
+                android:text="@string/smoky_Description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvKauftTitle" />
+                app:layout_constraintTop_toBottomOf="@id/tvBigSmokyTitle" />
+
+            <TextView
+                android:id="@+id/tvProjektTitle_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/projekt_title_1"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSmokyDescription" />
+
+            <TextView
+                android:id="@+id/tvProjektDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/projekt_Description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProjektTitle_1" />
+
+
+            <TextView
+                android:id="@+id/tvAnalyseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/analyse_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvProjektDescription" />
+
+            <TextView
+                android:id="@+id/tvAnalyseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/analyse_Description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAnalyseTitle" />
+
+            <TextView
+                android:id="@+id/tvPunkteTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/punkte_title"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAnalyseDescription" />
+
+            <TextView
+                android:id="@+id/tvPunkteDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/punkte_Description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPunkteTitle" />
+
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/video_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:gravity="center"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
+                android:translationZ="@dimen/_2sdp"
                 app:autoPlay="false"
                 app:handleNetworkEvents="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvKauftDescription"
+                app:layout_constraintTop_toBottomOf="@+id/tvPunkteDescription"
                 app:videoId="Zz5ZXmhJJTs" />
+
+            <ImageButton
+                android:id="@+id/IbVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:contentDescription="@string/app_name"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/video_thumbnail"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPunkteDescription" />
 
             <TextView
                 android:id="@+id/btnStrongBuy1"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textSize="16sp"
                 android:layout_width="@dimen/_160sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginVertical="@dimen/_10sdp"
                 android:background="@drawable/button_background"
+                android:fontFamily="@font/dm_sans_bold"
                 android:gravity="center"
                 android:text="@string/strong"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1143,16 +1197,16 @@
 
             <TextView
                 android:id="@+id/tvHaftungsausschlussTitle"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:textSize="20sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="@dimen/_10sdp"
+                android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/haftungsausschluss_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1161,17 +1215,17 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvHaftungsausschlussDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/kanda_description"
-                android:textIsSelectable="true"
-                app:animDuration="500"
                 android:textColor="@color/colorDarkGrey"
+
+                android:textSize="16sp"
+                app:animDuration="500"
                 app:collapsedLines="10"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
@@ -1184,15 +1238,15 @@
 
             <TextView
                 android:id="@+id/tvEnthaftungserklarungTitle"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/enthaftungserklarung_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHaftungsausschlussDescription" />
@@ -1200,21 +1254,21 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvEnthaftungserklarungDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
+
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/enthaftungserklarung_description"
-                android:textIsSelectable="true"
+                android:textColor="@color/colorDarkGrey"
+
+                android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="13"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
-                android:textColor="@color/colorDarkGrey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvEnthaftungserklarungTitle"
@@ -1224,31 +1278,31 @@
 
             <TextView
                 android:id="@+id/tvOffenlegungTitle"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/offenlegung_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvEnthaftungserklarungDescription" />
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvOffenlegungDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:textColor="@color/colorDarkGrey"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/offenlegung_description"
-                android:textIsSelectable="true"
+                android:textColor="@color/colorDarkGrey"
+
+                android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="6"
                 app:ellipsizeTextColor="@color/colorCyn"
@@ -1263,15 +1317,15 @@
 
             <TextView
                 android:id="@+id/tvBewertungTitle"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/bewertung_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1279,16 +1333,16 @@
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvBewertungDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_10sdp"
-                android:textColor="@color/colorDarkGrey"
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/bewertung_description"
-                android:textIsSelectable="true"
+                android:textColor="@color/colorDarkGrey"
+
+                android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="12"
                 app:ellipsizeTextColor="@color/colorCyn"
@@ -1302,63 +1356,63 @@
 
             <TextView
                 android:id="@+id/tvAdressatenTitle"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/adressaten_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvBewertungDescription" />
 
             <TextView
                 android:id="@+id/tvAdressatenDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
+
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/adressaten_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAdressatenTitle" />
 
             <TextView
                 android:id="@+id/tvInformationsquellenTitle"
-                android:fontFamily="@font/dm_sans_bold"
-                android:textSize="16sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_bold"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/informationsquellen_title"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAdressatenDescription" />
 
             <TextView
                 android:id="@+id/tvInformationsquellenDescription"
-                android:fontFamily="@font/dm_sans_regular"
-                android:textSize="16sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
+                android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
+
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/informationsquellen_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenTitle" />
 
@@ -1375,30 +1429,30 @@
 
                 <TextView
                     android:id="@+id/tvFooterTitle"
-                    android:fontFamily="@font/zilla_slab_medium"
-                    android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/zilla_slab_medium"
                     android:gravity="center_horizontal"
                     android:text="@string/footer_title"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
+                    android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tvFooterDescription"
-                    android:fontFamily="@font/dm_sans_regular"
-                    android:textSize="16sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_regular"
                     android:gravity="center_horizontal"
                     android:lineSpacingExtra="@dimen/_2sdp"
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/footer_description"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvFooterTitle" />
 
@@ -1415,17 +1469,17 @@
 
                     <EditText
                         android:id="@+id/edtFooterEmail"
-                        android:fontFamily="@font/dm_sans_regular"
-                        android:textSize="14sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:background="@color/white"
+                        android:fontFamily="@font/dm_sans_regular"
                         android:hint="@string/email_footer_hint"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
                         android:padding="@dimen/_5sdp"
                         android:textColorHint="@color/colorGreyEditText"
                         android:textCursorDrawable="@drawable/edit_text_cursor"
+                        android:textSize="14sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1443,7 +1497,7 @@
                     android:paddingVertical="@dimen/_5sdp"
                     android:text="@string/form_submit"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
                     android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cLFooterEmail" />
@@ -1458,16 +1512,16 @@
 
                 <TextView
                     android:id="@+id/tvFooterCheckBoxDescription"
-                    android:fontFamily="@font/dm_sans_regular"
-                    android:textSize="16sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/dm_sans_regular"
                     android:gravity="start"
                     android:lineSpacingExtra="@dimen/_2sdp"
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/footer_checkbox_description"
                     android:textColor="@color/colorDarkGrey"
-                    android:textIsSelectable="true"
+
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/footerCheckbox"
                     app:layout_constraintTop_toBottomOf="@id/tvFooterFormSubmit" />
@@ -1486,15 +1540,15 @@
 
                     <TextView
                         android:id="@+id/tvFooterSubmit"
-                        android:fontFamily="@font/dm_sans_medium"
-                        android:textSize="16sp"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/jetzt_btn_background"
+                        android:fontFamily="@font/dm_sans_medium"
                         android:gravity="center"
                         android:paddingVertical="@dimen/_8sdp"
                         android:text="@string/footer_submit"
                         android:textColor="@color/colorDarkGrey"
+                        android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

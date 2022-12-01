@@ -1,8 +1,11 @@
 package com.asif.lithiumaktie
 
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.DisplayMetrics
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
@@ -11,7 +14,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.asif.lithiumaktie.common.showToast
 import com.asif.lithiumaktie.databinding.ActivityMainBinding
+import com.asif.lithiumaktie.utility.PreferenceData.getLanguageCode
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,8 +62,16 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+        checkLanguage()
     }
-
+    private fun checkLanguage() {
+        val myLocale = Locale(getLanguageCode())
+        val res: Resources = this.resources
+        val dm: DisplayMetrics = res.displayMetrics
+        val conf: Configuration = res.configuration
+        conf.locale = myLocale
+        res.updateConfiguration(conf, dm)
+    }
     override fun onBackPressed() {
 
         if (navController.currentDestination?.id != R.id.impressumFragment

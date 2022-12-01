@@ -2,6 +2,7 @@ package com.asif.lithiumaktie.ui.fragment
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,6 +51,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         try {
+            mBinding.tvOhneLithiumDescription.movementMethod = LinkMovementMethod.getInstance()
             lifecycle.addObserver(mBinding.videoView)
             mBinding.videoView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
 
@@ -133,7 +135,7 @@ class HomeFragment : Fragment() {
                         }
                     }
                 } else {
-                    requireActivity().showToast(getString(R.string.not_connected))
+                    requireActivity().showToast(getString(com.asif.lithiumaktie.R.string.not_connected))
                 }
             }
         } catch (e: Exception) {
@@ -229,4 +231,5 @@ class HomeFragment : Fragment() {
         super.onStop()
 
     }
+
 }

@@ -2,11 +2,14 @@ package com.asif.lithiumaktie.common
 
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.Uri
 import android.os.Build
 import android.os.SystemClock
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -147,4 +150,12 @@ fun showAlertDialog(
         parentFragmentManager,
         AlertDialog.TAG
     )
+}
+fun changeLocale(context: Context, code: String) {
+    val myLocale = Locale(code)
+    val res: Resources = context.resources
+    val dm: DisplayMetrics = res.displayMetrics
+    val conf: Configuration = res.configuration
+    conf.locale = myLocale
+    res.updateConfiguration(conf, dm)
 }
