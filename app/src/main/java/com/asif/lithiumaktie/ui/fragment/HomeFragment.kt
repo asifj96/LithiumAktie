@@ -61,12 +61,16 @@ class HomeFragment : Fragment() {
 
             MainActivity.activityMainBinding.bottomNav.visibility = View.VISIBLE
             mBinding.headerMain.tvDate.text = "Aktientipp am ${requireContext().getCurrentDate()}"
-
             mBinding.tvShareArticle.setOnClickListener {
 
                 if (disableClick()) {
 
                     requireContext().shareApp()
+                }
+            }
+            mBinding.tvHeaderImageDescription.setOnClickListener {
+                if (disableClick()) {
+                    requireContext().openHeaderPage()
                 }
             }
             mBinding.headerMain.tvStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }

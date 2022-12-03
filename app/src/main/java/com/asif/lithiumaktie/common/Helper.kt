@@ -50,6 +50,12 @@ fun Context.openStrongBuy() {
     this.startActivity(intent)
 }
 
+fun Context.openHeaderPage() {
+    val uri = Uri.parse(getString(R.string.header_url))
+    val intent = Intent(Intent.ACTION_VIEW, uri)
+    this.startActivity(intent)
+}
+
 fun Context.openUrl() {
     val uri = Uri.parse("https://arbormetalscorp.com/")
     val intent = Intent(Intent.ACTION_VIEW, uri)
