@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.core.widget.NestedScrollView
@@ -57,14 +58,14 @@
                 style="@style/TextViewStyleDmSansBold.14sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:gravity="center_horizontal"
                 android:text="@string/header_image_description"
                 android:textColor="@color/colorDarkGrey"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHeaderImageTitle" />
 
             <TextView
@@ -95,7 +96,7 @@
                 android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/Anlegerstudie"
                 android:textColor="@color/colorDarkCyn"
-                
+
                 android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@id/tvAktienempfehlung"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +116,7 @@
                 android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/Aktienempfehlung"
                 android:textColor="@color/colorCyn"
-                
+
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/tvAnlegerstudie"
@@ -159,7 +160,7 @@
                     android:padding="@dimen/_10sdp"
                     android:text="@string/jetzt_description"
                     android:textColor="@color/colorDarkGrey"
-                    
+
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -186,10 +187,10 @@
                         android:background="@color/white"
                         android:fontFamily="@font/dm_sans_regular"
                         android:hint="@string/email_hint"
+                        android:imeOptions="actionDone"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
                         android:padding="@dimen/_8sdp"
-                        android:imeOptions="actionDone"
                         android:textColorHint="@color/colorGreyEditText"
                         android:textCursorDrawable="@drawable/edit_text_cursor"
                         android:textSize="14sp"
@@ -210,7 +211,7 @@
                     android:paddingVertical="@dimen/_5sdp"
                     android:text="@string/form_submit"
                     android:textColor="@color/colorDarkGrey"
-                    
+
                     android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cLJetztEmail" />
@@ -359,7 +360,7 @@
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_branche_name"
                         android:textColor="@color/colorDarkGrey"
-                        
+
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.41"
@@ -435,7 +436,7 @@
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_borsenkennung_name"
                         android:textColor="@color/colorDarkGrey"
-                        
+
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -473,7 +474,7 @@
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_aktueller_kurs_name"
                         android:textColor="@color/colorDarkGrey"
-                        
+
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -510,7 +511,7 @@
                         android:paddingVertical="@dimen/_5sdp"
                         android:text="@string/kauf_kursziel_name"
                         android:textColor="@color/colorDarkGrey"
-                        
+
                         android:textSize="16sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -525,8 +526,8 @@
                         android:background="@drawable/button_background"
                         android:fontFamily="@font/dm_sans_bold"
                         android:gravity="center"
-                        android:text="@string/strong"
                         android:paddingVertical="@dimen/_10sdp"
+                        android:text="@string/strong"
                         android:textAllCaps="true"
                         android:textColor="@color/colorWhite"
                         android:textSize="16sp"
@@ -562,7 +563,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/ohne_lithium"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -601,7 +602,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/investroen"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -617,7 +618,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/investroen_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInvestorenTitle" />
@@ -649,7 +650,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/ohne_lithium_description_1"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvOhneLithiumImage" />
@@ -664,7 +665,7 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/ohne_lithium_description_2"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="7"
@@ -686,7 +687,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/warum_die"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -702,7 +703,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/warum_die_description_1"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="7"
@@ -723,7 +724,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/europa_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -739,7 +740,7 @@
                 android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/europa_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="7"
@@ -760,7 +761,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/regierungen_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -776,7 +777,7 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/regierungen_description_1"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -808,7 +809,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/lithiumGehtGut"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvLithiumGehtGut" />
@@ -823,7 +824,7 @@
                 android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/lithiumGehtGut_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="7"
@@ -844,7 +845,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/gesetz_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -860,7 +861,7 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/gesetz_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -893,7 +894,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/lithiumGehtGut"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/IvArborAktie" />
@@ -908,7 +909,7 @@
                 android:paddingVertical="@dimen/_8sdp"
                 android:text="@string/arbor_description_1"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="4"
@@ -929,12 +930,11 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/zuarbor_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvArborAktieDescription_1" />
-
 
 
             <io.github.glailton.expandabletextview.ExpandableTextView
@@ -962,8 +962,8 @@
                 android:id="@+id/video_view"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp"
-                android:gravity="center"
                 android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 app:autoPlay="false"
@@ -981,8 +981,8 @@
                 android:background="@drawable/button_background"
                 android:fontFamily="@font/dm_sans_bold"
                 android:gravity="center"
-                android:text="@string/strong"
                 android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/strong"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="16sp"
@@ -1012,7 +1012,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/haftungsausschluss_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1030,7 +1030,6 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/kanda_description"
                 android:textColor="@color/colorDarkGrey"
-                
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="10"
@@ -1052,7 +1051,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/enthaftungserklarung_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1070,7 +1069,7 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/enthaftungserklarung_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="13"
@@ -1092,7 +1091,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/offenlegung_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1108,7 +1107,7 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/offenlegung_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="6"
@@ -1131,7 +1130,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/bewertung_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1148,7 +1147,7 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/bewertung_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="12"
@@ -1170,7 +1169,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/adressaten_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1187,7 +1186,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/adressaten_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAdressatenTitle" />
@@ -1201,7 +1200,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/informationsquellen_title"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -1218,7 +1217,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/informationsquellen_description"
                 android:textColor="@color/colorDarkGrey"
-                
+
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenTitle" />
@@ -1232,7 +1231,8 @@
                 android:padding="@dimen/_12sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenDescription">
+                app:layout_constraintTop_toBottomOf="@id/tvInformationsquellenDescription"
+                tools:ignore="TooManyViews">
 
                 <TextView
                     android:id="@+id/tvFooterTitle"
@@ -1242,7 +1242,7 @@
                     android:gravity="center_horizontal"
                     android:text="@string/footer_title"
                     android:textColor="@color/colorDarkGrey"
-                    
+
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -1258,7 +1258,7 @@
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/footer_description"
                     android:textColor="@color/colorDarkGrey"
-                    
+
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvFooterTitle" />
@@ -1281,9 +1281,9 @@
                         android:background="@color/white"
                         android:fontFamily="@font/dm_sans_regular"
                         android:hint="@string/email_footer_hint"
+                        android:imeOptions="actionDone"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
-                        android:imeOptions="actionDone"
                         android:padding="@dimen/_10sdp"
                         android:textColorHint="@color/colorGreyEditText"
                         android:textCursorDrawable="@drawable/edit_text_cursor"
@@ -1305,7 +1305,7 @@
                     android:paddingVertical="@dimen/_5sdp"
                     android:text="@string/form_submit"
                     android:textColor="@color/colorDarkGrey"
-                    
+
                     android:visibility="gone"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/cLFooterEmail" />
@@ -1328,7 +1328,7 @@
                     android:paddingVertical="@dimen/_10sdp"
                     android:text="@string/footer_checkbox_description"
                     android:textColor="@color/colorDarkGrey"
-                    
+
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/footerCheckbox"
