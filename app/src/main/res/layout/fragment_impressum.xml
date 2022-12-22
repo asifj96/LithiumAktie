@@ -32,7 +32,6 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/Impressum"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -49,7 +48,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/angaben"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,7 +65,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/angaben_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAngabenTitle" />
 
@@ -79,7 +78,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/inhaltlich"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +95,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/inhaltich_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInhaltichTitle" />
 
@@ -110,7 +109,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/IEU"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,7 +126,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/ieu_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvIeuTitle" />
 
@@ -141,7 +140,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/verberu"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -158,7 +157,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/verberu_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvVerberuTitle" />
 
@@ -172,7 +171,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/haftung"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -189,7 +188,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Haftung_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHaftungTitle" />
 
@@ -203,7 +202,7 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/haftungLink"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -220,7 +219,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Haftung_link_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvHaftungLinkTitle" />
 
@@ -229,12 +228,10 @@
                 style="@style/TextViewStyleDmSansRegular.16sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/Urheberrecht"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -251,7 +248,7 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/Urheberrecht_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textIsSelectable="true"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvUrheberrechtTitle" />
 

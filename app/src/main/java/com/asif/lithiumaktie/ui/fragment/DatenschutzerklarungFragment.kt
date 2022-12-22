@@ -1,5 +1,6 @@
 package com.asif.lithiumaktie.ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,16 +22,21 @@ class DatenschutzerklarungFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding =
-            DataBindingUtil.inflate(
-                inflater,
-                R.layout.fragment_datenschutzerklarung,
-                container,
-                false
-            )
+        try {
+            mBinding =
+                DataBindingUtil.inflate(
+                    inflater,
+                    R.layout.fragment_datenschutzerklarung,
+                    container,
+                    false
+                )
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         return mBinding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         try {

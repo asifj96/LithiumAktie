@@ -3,58 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable-v23/start_app_drawable.xml" value="0.133" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable-v24/grey_background.xml" value="0.1285" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable-v24/grey_outline.xml" value="0.1285" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable-v24/outline_bg_2.xml" value="0.11" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/background_button.xml" value="0.103" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/bg_edit_text.xml" value="0.171" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/button_background.xml" value="0.208" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/cyn_outline.xml" value="0.171" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/datenschutzerklsrung_selector.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/edit_text_cursor.xml" value="0.171" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/grey_background.xml" value="0.1285" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/grey_outline.xml" value="0.1285" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/header_background.xml" value="0.208" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/home_selector.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_datenschutzerklarung_filled_icon.xml" value="0.175" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_datenschutzerklarung_unfilled_icon.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_header_image.xml" value="0.175" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_header_image_1.xml" value="0.1125" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_header_image_2.xml" value="0.1125" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_header_image_3.xml" value="0.1125" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_header_image_4.xml" value="0.1125" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_home_filled_icon.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_home_icon.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_impressum_filled_icon.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_impressum_icon.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_rect_app_icon.xml" value="0.143" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/impressum_selector.xml" value="0.126" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/jetzt_background.xml" value="0.171" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/jetzt_btn_background.xml" value="0.171" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/outline_bg_1.xml" value="0.11" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/outline_bg_2.xml" value="0.11" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/share_background.xml" value="0.11" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/start_app_drawable.xml" value="0.133" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/dialog_alert.xml" value="0.25" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/fragment_datenschutzerklarung.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/drawable/ic_rect_app_icon.xml" value="0.203" />
+        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/fragment_datenschutzerklarung.xml" value="0.18" />
         <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/fragment_impressum.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/fragment_splash.xml" value="0.20416666666666666" />
         <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/layout/header_layout.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
-        <entry key="..\:/AndroidStudioProject/LithiumAktie/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-        <entry key="..\:/Muhammad_Asif_Javed/chipmunk_android_studio/LithiumAktie/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Muhammad_Asif_Javed/chipmunk_android_studio/LithiumAktie/app/src/main/res/layout/fragment_datenschutzerklarung.xml" value="0.1" />
-        <entry key="..\:/Muhammad_Asif_Javed/chipmunk_android_studio/LithiumAktie/app/src/main/res/layout/fragment_home.xml" value="0.25" />
-        <entry key="..\:/Muhammad_Asif_Javed/chipmunk_android_studio/LithiumAktie/app/src/main/res/layout/fragment_impressum.xml" value="0.3316062176165803" />
-        <entry key="..\:/Muhammad_Asif_Javed/chipmunk_android_studio/LithiumAktie/app/src/main/res/layout/fragment_splash.xml" value="0.36666666666666664" />
-        <entry key="..\:/Muhammad_Asif_Javed/chipmunk_android_studio/LithiumAktie/app/src/main/res/layout/header_layout.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -29,8 +29,12 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_splash, container, false)
+        try {
+            mBinding =
+                DataBindingUtil.inflate(inflater, R.layout.fragment_splash, container, false)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         return mBinding.root
     }
 
@@ -42,7 +46,7 @@ class SplashFragment : Fragment() {
     }
 
     private fun startHandler() {
-        splashHandler.postDelayed(splashRunnable, 2000)
+        splashHandler.postDelayed(splashRunnable, 500)
     }
 
     override fun onResume() {

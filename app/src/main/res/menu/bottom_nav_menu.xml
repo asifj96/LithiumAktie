@@ -4,16 +4,19 @@
     <item
         android:id="@+id/impressumFragment"
         android:icon="@drawable/impressum_selector"
+        android:contentDescription="@string/app_name"
         android:title="@string/Impressum" />
 
     <item
         android:id="@+id/homeFragment"
         android:icon="@drawable/home_selector"
+        android:contentDescription="@string/app_name"
         android:title="@string/home" />
 
     <item
         android:id="@+id/datenschutzerklarungFragment"
         android:icon="@drawable/datenschutzerklsrung_selector"
+        android:contentDescription="@string/app_name"
         android:title="@string/datenschutzerklarung" />
 
 

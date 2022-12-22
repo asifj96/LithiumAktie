@@ -21,8 +21,12 @@ class ImpressumFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_impressum, container, false)
+        try {
+            mBinding =
+                DataBindingUtil.inflate(inflater, R.layout.fragment_impressum, container, false)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         return mBinding.root
     }
 
