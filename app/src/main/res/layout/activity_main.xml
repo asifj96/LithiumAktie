@@ -24,7 +24,7 @@
             style="@style/BottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:textSize="@dimen/_12sdp"
+            android:textSize="16sp"
             app:itemBackground="@color/colorCyn"
             android:visibility="invisible"
             app:itemIconTint="@color/colorWhite"

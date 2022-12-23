@@ -65,19 +65,17 @@ fun Context.openUrl() {
 fun Context.shareApp() {
 
     try {
-        val shareIntent = Intent(Intent.ACTION_SEND)
-        shareIntent.type = "text/plain"
-        shareIntent.putExtra(
-            Intent.EXTRA_TEXT, getString(R.string.app_name)
-        )
-
-        shareIntent.putExtra(Intent.EXTRA_TEXT, "https://lithium-aktie.de/")
-        startActivity(
-            Intent.createChooser(
-                shareIntent,
-                "Share using "
+        val shareIntent = Intent.createChooser(Intent().apply {
+            action = Intent.ACTION_SEND
+            type = "text/plain"
+            putExtra(
+                Intent.EXTRA_TEXT, getString(R.string.app_name)
             )
-        )
+            putExtra(Intent.EXTRA_TEXT, "https://lithium-aktie.de/")
+            flags = Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+        }, "Share using")
+        startActivity(shareIntent)
+
     } catch (e: Exception) {
         e.printStackTrace()
     }
