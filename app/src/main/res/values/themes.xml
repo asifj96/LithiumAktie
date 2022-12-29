@@ -14,13 +14,6 @@
 
     </style>
 
-    <style name="startAppTheme" parent="Theme.LithiumAktie">
-        <!-- Customize your theme here. -->
-        <item name="windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/start_app_drawable</item>
-    </style>
-
     <style name="BottomNavigationView">
         <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active
         </item>
@@ -57,9 +50,6 @@
         <item name="android:textStyle">normal</item>
         <item name="fontWeight">500</item>
     </style>
-    <style name="parentTextViewDmSansMedium" parent="Theme.LithiumAktie">
-        <item name="fontFamily">@font/dm_sans_medium</item>
-    </style>
 
     <style name="parentTextViewZilla" parent="Theme.LithiumAktie">
         <item name="fontFamily">@font/zilla_slab_regular</item>
@@ -67,21 +57,15 @@
         <item name="android:textStyle">normal</item>
         <item name="fontWeight">500</item>
     </style>
-    <style name="TextViewStyleDmSansBold.12sdp" parent="parentTextViewDmSansBold">
-        <item name="android:textSize">@dimen/_12sdp</item>
-    </style>
+
     <style name="TextViewStyleDmSansBold.14sdp" parent="parentTextViewDmSansBold">
         <item name="android:textSize">@dimen/_14sdp</item>
     </style>
-    <style name="TextViewStyleDmSansBold.16sdp" parent="parentTextViewDmSansBold">
-        <item name="android:textSize">@dimen/_16sdp</item>
-    </style>
+
     <style name="TextViewStyleDmSansRegular.12sdp" parent="parentTextViewDmSansRegular">
         <item name="android:textSize">@dimen/_12sdp</item>
     </style>
-    <style name="TextViewStyleDmSansRegular.10sdp" parent="parentTextViewDmSansRegular">
-        <item name="android:textSize">@dimen/_10sdp</item>
-    </style>
+
     <style name="TextViewStyleDmSansRegular.14sdp" parent="parentTextViewDmSansRegular">
         <item name="android:textSize">14sp</item>
     </style>
@@ -89,16 +73,6 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="TextViewStyle.28sdp" parent="parentTextViewZilla">
-        <item name="android:textSize">@dimen/_28sdp</item>
-    </style>
-
-    <style name="TextViewStyle.26sdp" parent="parentTextViewZilla">
-        <item name="android:textSize">@dimen/_26sdp</item>
-    </style>
-    <style name="TextViewStyle.24sdp" parent="parentTextViewZilla">
-        <item name="android:textSize">@dimen/_24sdp</item>
-    </style>
     <style name="TextViewStyle.22sdp" parent="parentTextViewZilla">
         <item name="android:textSize">@dimen/_22sdp</item>
     </style>
@@ -108,21 +82,12 @@
     <style name="TextViewStyle.18sdp" parent="parentTextViewZilla">
         <item name="android:textSize">22sp</item>
     </style>
-    <style name="TextViewStyle.16sdp" parent="parentTextViewZilla">
-        <item name="android:textSize">@dimen/_16sdp</item>
-    </style>
+
     <style name="TextViewStyle.14sdp" parent="parentTextViewZilla">
         <item name="android:textSize">@dimen/_14sdp</item>
     </style>
     <style name="TextViewStyle.12sdp" parent="parentTextViewZilla">
         <item name="android:textSize">@dimen/_12sdp</item>
-    </style>
-    <style name="TextViewStyle.10sdp" parent="parentTextViewZilla">
-        <item name="android:textSize">@dimen/_10sdp</item>
-    </style>
-
-    <style name="TextViewStyle.9sdp" parent="parentTextViewZilla">
-        <item name="android:textSize">@dimen/_9sdp</item>
     </style>
 
 </resources>

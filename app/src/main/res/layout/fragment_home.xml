@@ -539,7 +539,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
+            <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvKaufInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -550,9 +550,49 @@
                 android:text="@string/kauf_info"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="16sp"
+                android:textColorLink="@color/colorDarkCyn"
+                app:animDuration="500"
+                android:linksClickable="true"
+                android:autoLink="web"
+                app:collapsedLines="9"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/cLKaufemp" />
+
+            <ImageView
+                android:id="@+id/IvArborMetalChartImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/app_name"
+                android:elevation="@dimen/_2sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/arbor_metal_chart_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvKaufInfo" />
+
+            <TextView
+                android:id="@+id/tvArborMetalChartDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dm_sans_medium"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/arbor_metal_chart_description"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/IvArborMetalChartImage" />
 
             <TextView
                 android:id="@+id/tvOhneLithiumTitle"
@@ -563,35 +603,35 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/ohne_lithium"
                 android:textColor="@color/colorDarkGrey"
-
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvKaufInfo" />
+                app:layout_constraintTop_toBottomOf="@id/tvArborMetalChartDescription" />
 
             <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvOhneLithiumDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:autoLink="web"
                 android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:linksClickable="true"
+                android:autoLink="web"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/ohne_lithium_description"
                 android:textColor="@color/colorDarkGrey"
-                android:textColorLink="@color/colorDarkCyn"
                 android:textSize="16sp"
+                android:textColorLink="@color/colorDarkCyn"
                 app:animDuration="500"
-                app:collapsedLines="13"
+                app:collapsedLines="8"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle"
                 app:readLessText="Lese weniger"
                 app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:textMode="line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumTitle"
+                />
 
             <TextView
                 android:id="@+id/tvInvestorenTitle"
@@ -602,13 +642,12 @@
                 android:paddingVertical="@dimen/_10sdp"
                 android:text="@string/investroen"
                 android:textColor="@color/colorDarkGrey"
-
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription" />
 
-            <TextView
+            <io.github.glailton.expandabletextview.ExpandableTextView
                 android:id="@+id/tvInvestroenDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -618,345 +657,86 @@
                 android:paddingVertical="@dimen/_5sdp"
                 android:text="@string/investroen_description"
                 android:textColor="@color/colorDarkGrey"
-
                 android:textSize="16sp"
+                app:animDuration="500"
+                app:collapsedLines="6"
+                app:ellipsizeTextColor="@color/colorCyn"
+                app:isExpanded="false"
+                app:readLessText="Lese weniger"
+                app:readMoreText="Weiterlesen"
+                app:textMode="line"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInvestorenTitle" />
 
-            <ImageView
-                android:id="@+id/IvOhneLithiumImage"
+            <TextView
+                android:id="@+id/tvUnverzichtbarTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_ohne_lithium_icon"
+                android:fontFamily="@font/zilla_slab_medium"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/UnverzichtbarTitle"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvInvestroenDescription" />
 
-
-            <TextView
-                android:id="@+id/tvOhneLithiumDescription1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_medium"
-                android:gravity="center_horizontal"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/ohne_lithium_description_1"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvOhneLithiumImage" />
-
             <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvOhneLithiumDescription2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/ohne_lithium_description_2"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:animDuration="500"
-                app:collapsedLines="7"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription1"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvWarumDieTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/warum_die"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvOhneLithiumDescription2" />
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvWarumDieDescription1"
+                android:id="@+id/tvUnverzichtbarDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_regular"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/warum_die_description_1"
+                android:text="@string/unverzichtbar_description"
                 android:textColor="@color/colorDarkGrey"
-
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="7"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieTitle"
                 app:readLessText="Lese weniger"
                 app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:textMode="line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvUnverzichtbarTitle" />
 
             <TextView
-                android:id="@+id/tvEuropaTitle"
+                android:id="@+id/tvAnalystenTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/zilla_slab_medium"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/europa_title"
+                android:text="@string/AnalystenTitle"
                 android:textColor="@color/colorDarkGrey"
-
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvWarumDieDescription1" />
+                app:layout_constraintTop_toBottomOf="@id/tvUnverzichtbarDescription" />
 
             <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvEuropaDescription"
+                android:id="@+id/tvAnalystenDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
-                android:text="@string/europa_description"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:animDuration="500"
-                app:collapsedLines="7"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEuropaTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvRegierungenTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/regierungen_title"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvEuropaDescription" />
-
-            <TextView
-                android:id="@+id/tvRegierungenDescription1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/regierungen_description_1"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenTitle" />
-
-            <ImageView
-                android:id="@+id/IvLithiumGehtGut"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/lithium_geth_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRegierungenDescription1" />
-
-            <TextView
-                android:id="@+id/tvLithiumGehtGut"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_medium"
-                android:gravity="center_horizontal"
                 android:lineSpacingExtra="@dimen/_2sdp"
                 android:paddingHorizontal="@dimen/_8sdp"
                 android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/lithiumGehtGut"
+                android:text="@string/Analysten_description"
                 android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvLithiumGehtGut" />
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvLithiumGehtGutDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
-                android:text="@string/lithiumGehtGut_description"
-                android:textColor="@color/colorDarkGrey"
-
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="7"
                 app:ellipsizeTextColor="@color/colorCyn"
                 app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLithiumGehtGut"
                 app:readLessText="Lese weniger"
                 app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvGesetzTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/gesetz_title"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:textMode="line"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvLithiumGehtGutDescription" />
-
-            <TextView
-                android:id="@+id/tvGesetzDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                android:text="@string/gesetz_description"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvGesetzTitle" />
-
-
-            <ImageView
-                android:id="@+id/IvArborAktie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_8sdp"
-                android:adjustViewBounds="true"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/app_name"
-                android:elevation="@dimen/_2sdp"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_arbor_aktie_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvGesetzDescription" />
-
-            <TextView
-                android:id="@+id/tvArborAktieDescription"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_medium"
-                android:gravity="center_horizontal"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_5sdp"
-                android:text="@string/lithiumGehtGut"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/IvArborAktie" />
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvArborAktieDescription_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
-                android:text="@string/arbor_description_1"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="16sp"
-                app:animDuration="500"
-                app:collapsedLines="4"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvArborAktieDescription"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
-
-            <TextView
-                android:id="@+id/tvZuarborTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/zilla_slab_medium"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_10sdp"
-                android:text="@string/zuarbor_title"
-                android:textColor="@color/colorDarkGrey"
-
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvArborAktieDescription_1" />
-
-
-            <io.github.glailton.expandabletextview.ExpandableTextView
-                android:id="@+id/tvZuborTitleDescription_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/dm_sans_regular"
-                android:lineSpacingExtra="@dimen/_2sdp"
-                android:paddingHorizontal="@dimen/_8sdp"
-                android:paddingVertical="@dimen/_8sdp"
-                android:text="@string/zubor_title_description"
-                android:textColor="@color/colorDarkGrey"
-                android:textSize="16sp"
-                app:animDuration="500"
-                app:collapsedLines="5"
-                app:ellipsizeTextColor="@color/colorCyn"
-                app:isExpanded="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvZuarborTitle"
-                app:readLessText="Lese weniger"
-                app:readMoreText="Weiterlesen"
-                app:textMode="line" />
+                app:layout_constraintTop_toBottomOf="@id/tvAnalystenTitle" />
 
             <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/video_view"
@@ -970,7 +750,7 @@
                 app:handleNetworkEvents="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvZuborTitleDescription_1"
+                app:layout_constraintTop_toBottomOf="@+id/tvAnalystenDescription"
                 app:videoId="Zz5ZXmhJJTs" />
 
             <TextView
