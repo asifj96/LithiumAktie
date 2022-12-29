@@ -887,7 +887,6 @@
                 android:paddingBottom="@dimen/_10sdp"
                 android:text="@string/offenlegung_description"
                 android:textColor="@color/colorDarkGrey"
-
                 android:textSize="16sp"
                 app:animDuration="500"
                 app:collapsedLines="6"
