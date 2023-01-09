@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.Uri
 import android.os.Build
 import android.os.SystemClock
 import android.util.Log
@@ -15,51 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.asif.lithiumaktie.R
 import com.asif.lithiumaktie.dialog.AlertDialog
-import timber.log.Timber
-import java.text.ParseException
-import java.text.SimpleDateFormat
-import java.util.*
 
 fun Context.showToast(str: String) {
     Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
-}
-
-fun Context.getCurrentDate(): String {
-
-    val formatDate: String?
-    var date: Date? = null
-    val getCurrentDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(
-        Date()
-    )
-    val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
-    try {
-        date = formatter.parse(getCurrentDate)
-        Timber.e("formatted date $date")
-    } catch (e: ParseException) {
-        e.printStackTrace()
-    }
-//    formatDate = SimpleDateFormat("a MM/dd/yyyy", Locale.getDefault()).format(date!!)
-    formatDate = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault()).format(date!!)
-
-    return formatDate
-}
-
-fun Context.openStrongBuy() {
-    val uri = Uri.parse(getString(R.string.strong_buy_url))
-    val intent = Intent(Intent.ACTION_VIEW, uri)
-    this.startActivity(intent)
-}
-
-fun Context.openHeaderPage() {
-    val uri = Uri.parse(getString(R.string.header_url))
-    val intent = Intent(Intent.ACTION_VIEW, uri)
-    this.startActivity(intent)
-}
-
-fun Context.openUrl() {
-    val uri = Uri.parse("https://arbormetalscorp.com/")
-    val intent = Intent(Intent.ACTION_VIEW, uri)
-    this.startActivity(intent)
 }
 
 fun Context.shareApp() {
@@ -100,25 +57,20 @@ fun Context.isOnline(): Boolean {
             connectivityManager.getNetworkCapabilities(connectivityManager.activeNetwork)
         if (capabilities != null) {
             if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
-                Log.e("tagInternet", "NetworkType : WIFI")
                 return true
             }
             if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
-                Log.e("tagInternet", "NetworkType : CELLULAR")
                 return true
             }
             return if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
-                Log.e("tagInternet", "NetworkType : VPN")
                 true
             } else {
-                Log.e("tagInternet", "No internet connection ")
                 false
             }
         }
     } else {
         val cm =
             this.getSystemService(AppCompatActivity.CONNECTIVITY_SERVICE) as ConnectivityManager
-        Log.e("tagInternet", "NetworkType : Lollipop Device")
         return cm.activeNetworkInfo != null && cm.activeNetworkInfo!!.isConnected
     }
     return false

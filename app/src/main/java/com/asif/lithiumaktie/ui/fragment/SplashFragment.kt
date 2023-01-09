@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asif.lithiumaktie.R
+import com.asif.lithiumaktie.common.disableClick
 import com.asif.lithiumaktie.databinding.FragmentSplashBinding
 import timber.log.Timber
 
@@ -22,7 +23,9 @@ class SplashFragment : Fragment() {
     }
 
     private fun gotoMainScreen() {
-        findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+        if (disableClick()) {
+            findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
+        }
     }
 
     override fun onCreateView(

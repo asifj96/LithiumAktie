@@ -1,5 +1,8 @@
 package com.asif.lithiumaktie.ui.fragment
 
+import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
@@ -26,6 +29,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import timber.log.Timber
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class HomeFragment : Fragment() {
@@ -50,6 +56,7 @@ class HomeFragment : Fragment() {
         return mBinding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -59,12 +66,12 @@ class HomeFragment : Fragment() {
 
                 override fun onReady(youTubePlayer: YouTubePlayer) {
                     super.onReady(youTubePlayer)
-                    youTubePlayer.loadVideo("Zz5ZXmhJJTs", 0f)
+                    youTubePlayer.loadVideo("131AEjj-GGs", 0f)
                 }
             })
 
             MainActivity.activityMainBinding.bottomNav.visibility = View.VISIBLE
-            mBinding.headerMain.tvDate.text = "Aktientipp am ${requireContext().getCurrentDate()}"
+            mBinding.headerMain.tvDate.text = "Aktientipp am ${getCurrentDate()}"
             mBinding.tvShareArticle.setOnClickListener {
 
                 if (disableClick()) {
@@ -74,13 +81,39 @@ class HomeFragment : Fragment() {
             }
             mBinding.tvHeaderImageDescription.setOnClickListener {
                 if (disableClick()) {
-                    requireContext().openHeaderPage()
+                    val uri = Uri.parse(getString(R.string.header_url))
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
                 }
             }
-            mBinding.headerMain.tvStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }
-            mBinding.btnStrongBuy.setOnClickListener { requireActivity().openStrongBuy() }
-            mBinding.btnStrongBuy1.setOnClickListener { requireActivity().openStrongBuy() }
-            mBinding.tvKaufWebseiteName.setOnClickListener { requireActivity().openUrl() }
+            mBinding.headerMain.tvStrongBuy.setOnClickListener {
+                if (disableClick()) {
+                    val uri = Uri.parse(getString(R.string.strong_buy_url))
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+            }
+            mBinding.btnStrongBuy.setOnClickListener {
+                if (disableClick()) {
+                    val uri = Uri.parse(getString(R.string.strong_buy_url))
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+            }
+            mBinding.btnStrongBuy1.setOnClickListener {
+                if (disableClick()) {
+                    val uri = Uri.parse(getString(R.string.strong_buy_url))
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+            }
+            mBinding.tvKaufWebseiteName.setOnClickListener {
+                if (disableClick()) {
+                    val uri = Uri.parse("https://arbormetalscorp.com/")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+            }
             mBinding.headerMain.tv.setOnClickListener {
 
                 if (disableClick()) {
@@ -171,10 +204,13 @@ class HomeFragment : Fragment() {
                         ) {
                             if (response.isSuccessful) {
                                 val subscribeResponse: SubscribeResponse? = response.body()
-                                subscribeResponse?.let { response ->
-                                    if (response.status) {
+                                subscribeResponse?.let { genericResponse ->
+                                    if (genericResponse.status) {
 
-                                        showAlertDialog(childFragmentManager, response.message) {
+                                        showAlertDialog(
+                                            childFragmentManager,
+                                            genericResponse.message
+                                        ) {
                                             enableUI(hasJetztSubmit)
                                         }
 
@@ -236,5 +272,25 @@ class HomeFragment : Fragment() {
     override fun onStop() {
         super.onStop()
 
+    }
+
+    private fun getCurrentDate(): String {
+
+        val formatDate: String?
+        var date: Date? = null
+        val getCurrentDate = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(
+            Date()
+        )
+        val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+        try {
+            date = formatter.parse(getCurrentDate)
+            Timber.e("formatted date $date")
+        } catch (e: ParseException) {
+            e.printStackTrace()
+        }
+//    formatDate = SimpleDateFormat("a MM/dd/yyyy", Locale.getDefault()).format(date!!)
+        formatDate = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault()).format(date!!)
+
+        return formatDate
     }
 }
